@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './css/bridge.css'
 export default function Bridge() {
     return (
 
@@ -329,7 +329,7 @@ export default function Bridge() {
                     </div>
                 </div>
             </div>
-        
+
         </div >
     )
 }
