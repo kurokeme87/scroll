@@ -1,6 +1,52 @@
 import React from 'react'
 import "./css/ecosystem.css"
+
+// slider import form react slick
+import Slider from 'react-slick';
+
+
 export default function Ecosystem() {
+    //custom CSS edits have been made to the slider
+    //to find the custom css go to "index.css"
+    //slider settings
+    var settings = {
+        accessibility: true,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
+
     return (
         <>
             <div className="MuiBox-root css-14i99rr e1de0imv0">
@@ -100,241 +146,227 @@ export default function Ecosystem() {
                         </div>
                     </div>
                     <div className="swiper swiper-initialized swiper-horizontal css-hfpyip e1de0imv0 swiper-backface-hidden" >
-                        <div
-                            className="swiper-wrapper"
-                            style={{
-                                transitionDuration: '0ms',
-                                transform: 'translate3d(-476.667px, 0px, 0px)',
-                                transitionDelay: '0ms'
-                            }}
-                        >
-                            <div
-                                className="swiper-slide swiper-slide-prev"
-                                style={{ width: "446.667px", marginRight: "30px" }}
-                            >
-                                <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
-                                    <picture className="css-1192dt e1de0imv0"
-                                    ><source type="image/webp" />
-                                        <img
-                                            alt="img"
-                                            src="https://scroll.ghost.io/content/images/2024/09/Xspace-banner_Alchemy-x-Scroll-_1024_512.png"
-                                        /></picture>
-                                    <p
-                                        className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
-                                    >
-                                        Alchemy x Scroll: Supercharge Your Scroll Development
-                                        with Alchemy's Web3 Suite
-                                    </p>
-                                    <button
-                                        className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
-                                        tabIndex="0"
-                                        type="button"
-                                    >
-                                        Read<span
-                                            className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
-                                        ><svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 14 14"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
-                                            focusable="false"
-                                            aria-hidden="true"
+                        <div className='slider-carousel'>
+                            <Slider {...settings}>
+                                <div
+                                    className="swiper-slide swiper-slide-prev"
+                                    style={{ width: "446.667px", marginRight: "30px" }}
+                                >
+                                    <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
+                                        <picture className="css-1192dt e1de0imv0"
+                                        ><source type="image/webp" />
+                                            <img
+                                                alt="img"
+                                                src="https://scroll.ghost.io/content/images/2024/09/Xspace-banner_Alchemy-x-Scroll-_1024_512.png"
+                                            /></picture>
+                                        <p
+                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
                                         >
-                                                <g clip-path="url(#clip0_287_384)">
-                                                    <path
-                                                        d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g></svg
-                                            ></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div
-                                className="swiper-slide swiper-slide-active"
-                                style={{ width: "446.667px", marginRight: "30px" }}
-                            >
-                                <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
-                                    <picture className="css-1192dt e1de0imv0"
-                                    ><source type="image/webp" />
-                                        <img
-                                            alt="img"
-                                            src="https://scroll.ghost.io/content/images/2024/09/Xspace-banner_0x-x-Scroll_1024_512.png"
-                                        /></picture>
-                                    <p
-                                        className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
-                                    >
-                                        0x x Scroll: Serious Swaps for Serious Onchain Apps
-                                    </p>
-                                    <button
-                                        className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
-                                        tabIndex="0"
-                                        type="button"
-                                    >
-                                        Read<span
-                                            className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
-                                        ><svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 14 14"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
-                                            focusable="false"
-                                            aria-hidden="true"
+                                            Alchemy x Scroll: Supercharge Your Scroll Development
+                                            with Alchemy's Web3 Suite
+                                        </p>
+                                        <button
+                                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
+                                            tabIndex="0"
+                                            type="button"
                                         >
-                                                <g clip-path="url(#clip0_287_384)">
-                                                    <path
-                                                        d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g></svg
-                                            ></span>
-                                    </button>
+                                            Read<span
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
+                                            ><svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                            >
+                                                    <g clip-path="url(#clip0_287_384)">
+                                                        <path
+                                                            d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
+                                                            fill="currentColor"
+                                                        ></path>
+                                                    </g></svg
+                                                ></span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                className="swiper-slide swiper-slide-next"
-                                style={{ width: "446.667px", marginRight: "30px" }}
-                            >
-                                <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
-                                    <picture className="css-1192dt e1de0imv0"
-                                    ><source type="image/webp" />
-                                        <img
-                                            alt="img"
-                                            src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Kaskade-x-Scroll-_1028_538-2.jpg"
-                                        /></picture>
-                                    <p
-                                        className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
-                                    >
-                                        Kaskade x Scroll: A Leap Forward in DeFi
-                                    </p>
-                                    <button
-                                        className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
-                                        tabIndex="0"
-                                        type="button"
-                                    >
-                                        Read<span
-                                            className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
-                                        ><svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 14 14"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
-                                            focusable="false"
-                                            aria-hidden="true"
+                                <div
+                                    className="swiper-slide swiper-slide-active"
+                                    style={{ width: "446.667px", marginRight: "30px" }}
+                                >
+                                    <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
+                                        <picture className="css-1192dt e1de0imv0"
+                                        ><source type="image/webp" />
+                                            <img
+                                                alt="img"
+                                                src="https://scroll.ghost.io/content/images/2024/09/Xspace-banner_0x-x-Scroll_1024_512.png"
+                                            /></picture>
+                                        <p
+                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
                                         >
-                                                <g clip-path="url(#clip0_287_384)">
-                                                    <path
-                                                        d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g></svg
-                                            ></span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div
-                                className="swiper-slide"
-                                style={{ width: "446.667px", marginRight: "30px" }}
-                            >
-                                <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
-                                    <picture className="css-1192dt e1de0imv0"
-                                    ><source type="image/webp" />
-                                        <img
-                                            alt="img"
-                                            src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Maverick-x-Scrol_1028_538.jpg"
-                                        /></picture>
-                                    <p
-                                        className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
-                                    >
-                                        Maverick x Scroll: A New Era of Efficient and Composable
-                                        DeFi
-                                    </p>
-                                    <button
-                                        className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
-                                        tabIndex="0"
-                                        type="button"
-                                    >
-                                        Read<span
-                                            className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
-                                        ><svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 14 14"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
-                                            focusable="false"
-                                            aria-hidden="true"
+                                            0x x Scroll: Serious Swaps for Serious Onchain Apps
+                                        </p>
+                                        <button
+                                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
+                                            tabIndex="0"
+                                            type="button"
                                         >
-                                                <g clip-path="url(#clip0_287_384)">
-                                                    <path
-                                                        d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g></svg
-                                            ></span>
-                                    </button>
+                                            Read<span
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
+                                            ><svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                            >
+                                                    <g clip-path="url(#clip0_287_384)">
+                                                        <path
+                                                            d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
+                                                            fill="currentColor"
+                                                        ></path>
+                                                    </g></svg
+                                                ></span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div
-                                className="swiper-slide"
-                                style={{ width: "446.667px", marginRight: "30px" }}
-                            >
-                                <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
-                                    <picture className="css-1192dt e1de0imv0"
-                                    ><source type="image/webp" />
-                                        <img
-                                            alt="img"
-                                            src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Ethena-x-Scroll_1028_538.jpg"
-                                        /></picture>
-                                    <p
-                                        className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
-                                    >
-                                        Ethena x Scroll: Empowering Financial Innovation with
-                                        USDe
-                                    </p>
-                                    <button
-                                        className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
-                                        tabIndex="0"
-                                        type="button"
-                                    >
-                                        Read<span
-                                            className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
-                                        ><svg
-                                            width="14"
-                                            height="14"
-                                            viewBox="0 0 14 14"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
-                                            focusable="false"
-                                            aria-hidden="true"
+                                <div
+                                    className="swiper-slide swiper-slide-next"
+                                    style={{ width: "446.667px", marginRight: "30px" }}
+                                >
+                                    <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
+                                        <picture className="css-1192dt e1de0imv0"
+                                        ><source type="image/webp" />
+                                            <img
+                                                alt="img"
+                                                src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Kaskade-x-Scroll-_1028_538-2.jpg"
+                                            /></picture>
+                                        <p
+                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
                                         >
-                                                <g clip-path="url(#clip0_287_384)">
-                                                    <path
-                                                        d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g></svg
-                                            ></span>
-                                    </button>
+                                            Kaskade x Scroll: A Leap Forward in DeFi
+                                        </p>
+                                        <button
+                                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
+                                            tabIndex="0"
+                                            type="button"
+                                        >
+                                            Read<span
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
+                                            ><svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                            >
+                                                    <g clip-path="url(#clip0_287_384)">
+                                                        <path
+                                                            d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
+                                                            fill="currentColor"
+                                                        ></path>
+                                                    </g></svg
+                                                ></span>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div
-                            className="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"
-                        >
-                            <span className="swiper-pagination-bullet"></span
-                            ><span
-                                className="swiper-pagination-bullet swiper-pagination-bullet-active"
-                            ></span
-                            ><span className="swiper-pagination-bullet"></span>
+                                <div
+                                    className="swiper-slide"
+                                    style={{ width: "446.667px", marginRight: "30px" }}
+                                >
+                                    <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
+                                        <picture className="css-1192dt e1de0imv0"
+                                        ><source type="image/webp" />
+                                            <img
+                                                alt="img"
+                                                src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Maverick-x-Scrol_1028_538.jpg"
+                                            /></picture>
+                                        <p
+                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
+                                        >
+                                            Maverick x Scroll: A New Era of Efficient and Composable
+                                            DeFi
+                                        </p>
+                                        <button
+                                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
+                                            tabIndex="0"
+                                            type="button"
+                                        >
+                                            Read<span
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
+                                            ><svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                            >
+                                                    <g clip-path="url(#clip0_287_384)">
+                                                        <path
+                                                            d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
+                                                            fill="currentColor"
+                                                        ></path>
+                                                    </g></svg
+                                                ></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div
+                                    className="swiper-slide"
+                                    style={{ width: "446.667px", marginRight: "30px" }}
+                                >
+                                    <div className="e1de0imv0 MuiBox-root css-o1l2wo e1de0imv0">
+                                        <picture className="css-1192dt e1de0imv0"
+                                        ><source type="image/webp" />
+                                            <img
+                                                alt="img"
+                                                src="https://scroll.ghost.io/content/images/2024/08/Xspace-cover_Ethena-x-Scroll_1028_538.jpg"
+                                            /></picture>
+                                        <p
+                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-y6qj4t e1de0imv0"
+                                        >
+                                            Ethena x Scroll: Empowering Financial Innovation with
+                                            USDe
+                                        </p>
+                                        <button
+                                            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 e1de0imv0 css-1ecaicd e1de0imv0"
+                                            tabIndex="0"
+                                            type="button"
+                                        >
+                                            Read<span
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"
+                                            ><svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 14 14"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-14w14g2 e1de0imv0"
+                                                focusable="false"
+                                                aria-hidden="true"
+                                            >
+                                                    <g clip-path="url(#clip0_287_384)">
+                                                        <path
+                                                            d="M14 0V10.6795L12.1926 8.8721V3.05488C8.50054 6.64105 5.12622 10.5467 1.32821 14L0 12.6987C3.77279 9.24535 7.11853 5.39354 10.7854 1.83259H5.15312L3.32052 0H14Z"
+                                                            fill="currentColor"
+                                                        ></path>
+                                                    </g></svg
+                                                ></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </Slider>
                         </div>
                     </div>
                 </div>
@@ -624,7 +656,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Aave"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Aave.svg"
                                                 alt="Aave"
                                                 width="88"
                                                 height="88"
@@ -799,7 +831,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Lido"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Lido.jpg"
                                                 alt="Lido"
                                                 width="88"
                                                 height="88"
@@ -1022,7 +1054,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Ankr"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Ankr.png"
                                                 alt="Ankr"
                                                 width="88"
                                                 height="88"
@@ -1216,7 +1248,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Chainlink"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Chainlink.png"
                                                 alt="Chainlink"
                                                 width="88"
                                                 height="88"
@@ -1428,7 +1460,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Safe"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Safe.jpg"
                                                 alt="Safe"
                                                 width="88"
                                                 height="88"
@@ -1608,7 +1640,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Compound Finance"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Compound%20Finance.png"
                                                 alt="Compound Finance"
                                                 width="88"
                                                 height="88"
@@ -1784,7 +1816,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-OKX Wallet"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/OKX%20Wallet.png"
                                                 alt="OKX Wallet"
                                                 width="88"
                                                 height="88"
@@ -1958,7 +1990,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Ambient Finance"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Ambient%20Finance.png"
                                                 alt="Ambient Finance"
                                                 width="88"
                                                 height="88"
@@ -2160,7 +2192,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Stargate"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Stargate.png"
                                                 alt="Stargate"
                                                 width="88"
                                                 height="88"
@@ -2327,7 +2359,7 @@ export default function Ecosystem() {
                                         <div className="MuiStack-root css-18ooous-logo e1de0imv0">
                                             <img
                                                 className="no-js-Nuri Exchange"
-                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                                src="https://scroll-eco-list.netlify.app/logos/Nuri%20Exchange.png"
                                                 alt="Nuri Exchange"
                                                 width="88"
                                                 height="88"
