@@ -10,19 +10,19 @@ export default function Blog() {
                     >
                         <div className="e1de0imv0 MuiBox-root css-m0gk11 e1de0imv0">
                             <p
-                                className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1e3tw2k e1de0imv0"
+                                className="text-black e1de0imv0 tsp-bold text-8xl"
                             >
                                 Scroll Blog
                             </p>
                             <p
-                                className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-emcz3x e1de0imv0"
+                                className=" MuiTypography-root MuiTypography-body1 e1de0imv0 css-emcz3x e1de0imv0"
                             >
                                 Learn about Scroll’s technology, research, and latest
                                 developments.
                             </p>
                         </div>
                         <div className="e1de0imv0 MuiBox-root css-1vw3sf e1de0imv0">
-                            <div className="e1de0imv0 MuiBox-root css-jztbsi e1de0imv0">
+                            <div className="e1de0imv0 MuiBox-root css-jztbsi e1de0imv0 hidden lg:block">
                                 <p
                                     className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1wlu2yy e1de0imv0"
                                 >
@@ -68,6 +68,22 @@ export default function Blog() {
                                 >
                                     Oldest
                                 </p>
+                            </div>
+                            <div className="h-fit w-fit lg:hidden ml-auto">
+                                <div className="border border-black flex items-center py-[5px] px-[12px] rounded-full mb-[2rem] w-fit">
+                                    <svg
+                                        className="block h-6 mr-[1rem]"
+                                        focusable="false"
+                                        aria-hidden="true"
+                                        viewBox="0 0 24 24"
+                                        data-testid="TuneIcon"
+                                    >
+                                        <path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"></path>
+                                    </svg>
+                                    <p className="MuiTypography-root MuiTypography-body1 css-tj6z3c e1de0imv0">
+                                        Filters
+                                    </p>
+                                </div>
                             </div>
                             <ul className="css-4r24du e1de0imv0">
                                 <div className="e1de0imv0 MuiBox-root css-1v9rqqx e1de0imv0">

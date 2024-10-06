@@ -5,7 +5,19 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#FFF8F3',
+        red: '#FF684B',
+        'primary-mid': '#FFF0DD',
+        'primary-bold': '#FFE6D1',
+      },
+      fontFamily: {
+        'TSP-bold': ['TSP-bold', 'sans-serif'],
+        'TSP-light': ['TSP-light', 'sans-serif'],
+        'TSP-medium': ['TSP-medium', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }

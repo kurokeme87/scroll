@@ -7,7 +7,7 @@ export default function Bridge() {
             <div className="MuiBox-root css-14i99rr e1de0imv0">
                 <div className="MuiContainer-root MuiContainer-maxWidthLg css-ef23km e1de0imv0">
                     <div className="MuiStack-root css-19mh4ig e1de0imv0">
-                        <p className="MuiTypography-root MuiTypography-body1 css-11d99qp e1de0imv0">
+                        <p className="MuiTypography-root css-11d99qp e1de0imv0 text-[48px] tsp-bold ">
                             Bridge
                         </p>
                         <button className="MuiButtonBase-root css-ebuhoc-button e1de0imv0" tabIndex="0" type="button">

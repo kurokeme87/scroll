@@ -2,12 +2,12 @@ import React from 'react'
 import './css/portal.css'
 export default function Portal() {
     return (
-        <div><div className="MuiContainer-root MuiContainer-maxWidthLg css-wiw22g e1de0imv0">
-            <div className="MuiBox-root css-1irjm5o e1de0imv0">
-                <p className="MuiTypography-root MuiTypography-body1 css-1uqsrsj e1de0imv0">
+        <div className='bg-primary'><div className="MuiContainer-root MuiContainer-maxWidthLg css-wiw22g e1de0imv0">
+            <div className=" css-1irjm5o ">
+                <p className="MuiTypography-root MuiTypography-body1 css-1uqsrsj e1de0imv0 text-8xl tsp-bold">
                     Scroll
                 </p>
-                <p className="MuiTypography-root MuiTypography-body1 css-mwx67j e1de0imv0">
+                <p className="MuiTypography-root MuiTypography-body1 css-mwx67j e1de0imv0 tsp-light">
                     Get started with our mainnet now!
                 </p>
             </div>
@@ -17,13 +17,13 @@ export default function Portal() {
                     <div className="MuiCardHeader-root css-16g3lhp-cardHeader e1de0imv0">
                         <div className="MuiCardHeader-content css-11qjisw e1de0imv0">
                             <span
-                                className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1kn56te-cardHeaderTitle e1de0imv0">Configure
+                                className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1kn56te-cardHeaderTitle e1de0imv0 tsp-bold">Configure
                                 for Scroll mainnet</span>
                         </div>
                     </div>
                     <div className="MuiCardContent-root css-ja1e20-cardContent e1de0imv0">
                         <div className="MuiBox-root css-l1igec-descriptionItem-even e1de0imv0">
-                            <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1nvq6ai e1de0imv0">
+                            <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1nvq6ai e1de0imv0 tsp-bold">
                                 Layer1
                             </p>
                             <div className="MuiStack-root css-1vzzs0y e1de0imv0">
@@ -31,14 +31,14 @@ export default function Portal() {
                                     Ethereum
                                 </p>
                                 <button
-                                    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button e1de0imv0 e1de0imv0 css-1ial0l7 e1de0imv0"
+                                    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button e1de0imv0 e1de0imv0 css-1ial0l7 e1de0imv0 tsp-bold"
                                     rel="noopener noreferrer" target="">
                                     Connect Wallet
                                 </button>
                             </div>
                         </div>
                         <div className="MuiBox-root css-l1igec-descriptionItem-even e1de0imv0">
-                            <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1nvq6ai e1de0imv0">
+                            <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1nvq6ai e1de0imv0 tsp-bold">
                                 Layer2
                             </p>
                             <div className="MuiStack-root css-1vzzs0y e1de0imv0">
@@ -46,7 +46,7 @@ export default function Portal() {
                                     Scroll
                                 </p>
                                 <button
-                                    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button e1de0imv0 e1de0imv0 css-1ial0l7 e1de0imv0"
+                                    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover MuiLink-button e1de0imv0 e1de0imv0 css-1ial0l7 e1de0imv0 tsp-bold"
                                     rel="noopener noreferrer" target="">
                                     Connect Wallet
                                 </button>
@@ -75,35 +75,35 @@ export default function Portal() {
                     </div>
                     <div className="MuiCardContent-root css-ja1e20-cardContent e1de0imv0">
                         <div className="MuiBox-root css-16in6yn-descriptionItem-odd e1de0imv0">
-                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0"
+                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0 tsp-bold"
                                 rel="noopener noreferrer" target="" href="/bridge">Bridge</a>
                             <p className="MuiTypography-root MuiTypography-body1 css-9iel36 e1de0imv0">
                                 Use our Hop fork to transfer tokens between L1 and L2.
                             </p>
                         </div>
                         <div className="MuiBox-root css-16in6yn-descriptionItem-odd e1de0imv0">
-                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0"
+                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0 tsp-bold"
                                 rel="noopener noreferrer" target="" href="/rollupscan">Rollup Explorer</a>
                             <p className="MuiTypography-root MuiTypography-body1 css-9iel36 e1de0imv0">
                                 See L2 block data being committed to and finalized on L1.
                             </p>
                         </div>
                         <div className="MuiBox-root css-16in6yn-descriptionItem-odd e1de0imv0">
-                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0"
+                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0 tsp-bold"
                                 rel="noopener noreferrer" target="_blank" href="https://etherscan.io">L1 Block Explorer</a>
                             <p className="MuiTypography-root MuiTypography-body1 css-9iel36 e1de0imv0">
                                 See your L1 transactions on Ethereum 's block explorer.
                             </p>
                         </div>
                         <div className="MuiBox-root css-16in6yn-descriptionItem-odd e1de0imv0">
-                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0"
+                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0 tsp-bold"
                                 rel="noopener noreferrer" target="_blank" href="https://scrollscan.com">L2 Block Explorer</a>
                             <p className="MuiTypography-root MuiTypography-body1 css-9iel36 e1de0imv0">
                                 See your L2 transactions on our fork of Blockscout.
                             </p>
                         </div>
                         <div className="MuiBox-root css-16in6yn-descriptionItem-odd e1de0imv0">
-                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0"
+                            <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover e1de0imv0 e1de0imv0 css-1j24cwm e1de0imv0 tsp-bold"
                                 rel="noopener noreferrer" target="_blank"
                                 href="https://docs.scroll.io/en/developers/developer-quickstart/">Documentation</a>
                             <p className="MuiTypography-root MuiTypography-body1 css-9iel36 e1de0imv0">
@@ -196,5 +196,5 @@ export default function Portal() {
             </div>
         </div>
         </div>
-  )
+    )
 }
