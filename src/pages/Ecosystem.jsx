@@ -4,6 +4,23 @@ import "./css/ecosystem.css"
 // slider import form react slick
 import Slider from 'react-slick';
 
+//imports for react spring animations
+import { useSpring, animated } from 'react-spring'
+
+
+//custom component for number animation using react spring
+//counter animation
+function Number({ n }) {
+    const { number } = useSpring({
+        from: { number: 0 },
+        number: n,
+        delay: 200,
+        config: { mass: 1, tension: 20, friction: 10 },
+    })
+    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>
+}
+
+
 
 export default function Ecosystem() {
     //custom CSS edits have been made to the slider
@@ -55,11 +72,11 @@ export default function Ecosystem() {
                 >
                     <div className="MuiStack-root css-dvxtzn e1de0imv0">
                         <p
-                            className="MuiTypography-root MuiTypography-body1 css-1ngehv9 e1de0imv0"
+                            className="text-black text-center tsp-bold text-8xl"
                         >
                             An Ecosystem <br />Forever in Motion
                         </p>
-                        <div className="MuiStack-root css-1fbu92l e1de0imv0">
+                        <div className="MuiStack-root css-1fbu92l e1de0imv0 flex flex-col sm:flex-row">
                             <div className="MuiStack-root css-tmohpi e1de0imv0">
                                 <p
                                     className="MuiTypography-root MuiTypography-body1 css-j0qdxn e1de0imv0"
@@ -67,9 +84,9 @@ export default function Ecosystem() {
                                     Total value locked
                                 </p>
                                 <p
-                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0"
+                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0 flex items-center justify-center"
                                 >
-                                    1.15 B
+                                    <Number n={1} /> . <Number n={20} />B
                                 </p>
                             </div>
                             <div className="MuiStack-root css-tmohpi e1de0imv0">
@@ -79,9 +96,9 @@ export default function Ecosystem() {
                                     Transaction count
                                 </p>
                                 <p
-                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0"
+                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0 flex items-center justify-center"
                                 >
-                                    90.30 M
+                                    <Number n={90} />.<Number n={30} />M
                                 </p>
                             </div>
                             <div className="MuiStack-root css-tmohpi e1de0imv0">
@@ -91,16 +108,23 @@ export default function Ecosystem() {
                                     Batches settled to L1
                                 </p>
                                 <p
-                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0"
+                                    className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-7586gb e1de0imv0 flex items-center justify-center tsp-bold"
                                 >
-                                    326,563
+                                    <Number n={326} />,<Number n={563} />
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="MuiBox-root css-yib3zg e1de0imv0"></div>
+            <div className="MuiBox-root css-yib3zg e1de0imv0">
+                <div className='md:hidden h-full'>
+                    <img className='h-full w-full object-cover' src="https://scroll.io/imgs/ecosystem/new-ecosystem-bg-mobile.svg" alt="ecosystem" />
+                </div>
+                <div className='hidden md:block h-full'>
+                    <img className='h-full w-full object-cover' src="https://scroll.io/imgs/ecosystem/new-ecosystem-bg.svg" alt="ecosystem" />
+                </div>
+            </div>
             <div
                 className="MuiBox-root css-1p60uw0 e1de0imv0"
                 id="ecosystem-highlights"
@@ -2692,7 +2716,7 @@ export default function Ecosystem() {
                                             Request a dApp
                                         </p>
                                         <p
-                                            className="MuiTypography-root MuiTypography-body1 css-18gzr4m e1de0imv0"
+                                            className="tsp-bold text-black"
                                         >
                                             Can’t find the application you’re looking for? We want
                                             to know!

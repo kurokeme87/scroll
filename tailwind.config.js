@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: '#FFF8F3',
         red: '#FF684B',
+        'primary-fair': '#FFE6C8',
         'primary-mid': '#FFF0DD',
         'primary-bold': '#FFE6D1',
       },

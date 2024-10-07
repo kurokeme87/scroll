@@ -5,73 +5,10 @@ const Sessions = () => {
 
     return (
         <div>
-            <div className="MuiBox-root css-navp2e e1de0imv0">
-                <div className="e1de0imv0 MuiBox-root css-s12uxf e1de0imv0"></div>
-                <div
-                    className="css-1ul6oqo e1de0imv0"
-                    style={{
-                        width: '91.21vw',
-                        left: '5vw',
-                        height: '17.285vw',
-                        bottom: '0px'
-                    }}
-                ></div>
-                <div
-                    className="css-xwe3d7 e1de0imv0"
-                    style={{
-                        width: '4.66vw',
-                        right: '4.4vw',
-                        height: '7.67vw',
-                        bottom: '36vw'
-                    }}
-                ></div>
-                <div
-                    className="css-6berff e1de0imv0"
-                    style={{
-                        width: '2.845vw',
-                        height: '3.814vw',
-                        left: '2.8vw',
-                        bottom: '38.56vw'
-                    }}
-                ></div>
-                <div
-                    className="css-a5klrh e1de0imv0"
-                    style={{
-                        width: '3.82vw',
-                        height: '21.15vw',
-                        left: '1.6vw',
-                        bottom: '29.2vw'
-                    }}
-                ></div>
-                <div
-                    className="css-1ynl8gj e1de0imv0"
-                    style={{
-                        width: '4.12vw',
-                        height: '8.8644vw',
-                        left: '1.74vw',
-                        bottom: '32.15vw'
-                    }}
-                ></div>
-                <div
-                    className="css-1j9l5uf e1de0imv0"
-                    style={{
-                        width: '3.07vw',
-                        height: '3.24vw',
-                        left: '2vw',
-                        bottom: '42vw'
-                    }}
-                ></div>
-                <div
-                    className="css-tjo61u e1de0imv0"
-                    style={{
-                        width: '8.95vw',
-                        height: '14.68vw',
-                        left: '0px',
-                        bottom: '22vw'
-                    }}
-                ></div>
+            <div className="md:min-h-[80vh] lg:min-h-screen min-h-[60vh] scroll-sessions-section">
+
                 <p
-                    className="MuiTypography-root MuiTypography-body1 css-1kp2mto e1de0imv0"
+                    className="MuiTypography-root MuiTypography-body1 css-1kp2mto e1de0imv0 text-5xl md:text-6xl lg:text-8xl tsp-bold"
                 >
                     Scroll Sessions
                 </p>
@@ -79,34 +16,19 @@ const Sessions = () => {
             <div
                 className="MuiContainer-root MuiContainer-maxWidthLg css-1qgbawf e1de0imv0"
             >
-                <ul className="MuiList-root MuiList-padding css-1bgoh1t e1de0imv0">
+                <ul className="MuiList-root MuiList-padding css-1bgoh1t e1de0imv0 hidden  lg:block">
                     <li
-                        className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-iudm6e e1de0imv0"
+                        className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-iudm6e e1de0imv0 text-black tsp-bold"
                     >
                         Session One
                     </li>
                     <div
-                        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters Mui-selected MuiListItemButton-root MuiListItemButton-gutters Mui-selected e1de0imv0 css-8b1w15 e1de0imv0"
+                        className=" !text-black MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters Mui-selected MuiListItemButton-root MuiListItemButton-gutters Mui-selected e1de0imv0 css-8b1w15 e1de0imv0"
                         tabindex="0"
                         role="button"
                     >
                         <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0">
-                            <svg
-                                width="24"
-                                height="25"
-                                viewBox="0 0 24 25"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1trirmb e1de0imv0"
-                                focusable="false"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M5.36624 17.25L7.68949 19.573C7.83816 19.7218 7.91149 19.8959 7.90949 20.0953C7.90766 20.2946 7.82916 20.4718 7.67399 20.627C7.51882 20.7718 7.34316 20.8468 7.14699 20.852C6.95099 20.857 6.77541 20.782 6.62024 20.627L3.12599 17.1328C3.03232 17.0391 2.96632 16.9403 2.92799 16.8365C2.88949 16.7327 2.87024 16.6205 2.87024 16.5C2.87024 16.3795 2.88949 16.2673 2.92799 16.1635C2.96632 16.0597 3.03232 15.9609 3.12599 15.8673L6.62024 12.373C6.75874 12.2347 6.93016 12.1638 7.13449 12.1605C7.33899 12.1573 7.51882 12.2282 7.67399 12.373C7.82916 12.5282 7.90674 12.7064 7.90674 12.9078C7.90674 13.1089 7.82916 13.2871 7.67399 13.4423L5.36624 15.75H19.7432C19.9561 15.75 20.1342 15.8218 20.2777 15.9655C20.4214 16.109 20.4932 16.2872 20.4932 16.5C20.4932 16.7128 20.4214 16.891 20.2777 17.0345C20.1342 17.1782 19.9561 17.25 19.7432 17.25H5.36624ZM18.6202 9.25H4.24324C4.03041 9.25 3.85224 9.17817 3.70874 9.0345C3.56507 8.891 3.49324 8.71283 3.49324 8.5C3.49324 8.28717 3.56507 8.109 3.70874 7.9655C3.85224 7.82183 4.03041 7.75 4.24324 7.75H18.6202L16.297 5.427C16.1483 5.27817 16.075 5.10408 16.077 4.90475C16.0788 4.70542 16.1573 4.52817 16.3125 4.373C16.4677 4.22817 16.6433 4.15317 16.8395 4.148C17.0355 4.143 17.2111 4.218 17.3662 4.373L20.8605 7.86725C20.9542 7.96092 21.0202 8.05967 21.0585 8.1635C21.097 8.26733 21.1162 8.3795 21.1162 8.5C21.1162 8.6205 21.097 8.73267 21.0585 8.8365C21.0202 8.94033 20.9542 9.03908 20.8605 9.13275L17.3662 12.627C17.2277 12.7653 17.0563 12.8362 16.852 12.8395C16.6475 12.8427 16.4677 12.7718 16.3125 12.627C16.1573 12.4718 16.0797 12.2936 16.0797 12.0923C16.0797 11.8911 16.1573 11.7129 16.3125 11.5578L18.6202 9.25Z"
-                                    fill="currentColor"
-                                ></path>
-                            </svg>
-                        </div>
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-black" focusable="false" aria-hidden="true"><path d="M5.36624 17.25L7.68949 19.573C7.83816 19.7218 7.91149 19.8959 7.90949 20.0953C7.90766 20.2946 7.82916 20.4718 7.67399 20.627C7.51882 20.7718 7.34316 20.8468 7.14699 20.852C6.95099 20.857 6.77541 20.782 6.62024 20.627L3.12599 17.1328C3.03232 17.0391 2.96632 16.9403 2.92799 16.8365C2.88949 16.7327 2.87024 16.6205 2.87024 16.5C2.87024 16.3795 2.88949 16.2673 2.92799 16.1635C2.96632 16.0597 3.03232 15.9609 3.12599 15.8673L6.62024 12.373C6.75874 12.2347 6.93016 12.1638 7.13449 12.1605C7.33899 12.1573 7.51882 12.2282 7.67399 12.373C7.82916 12.5282 7.90674 12.7064 7.90674 12.9078C7.90674 13.1089 7.82916 13.2871 7.67399 13.4423L5.36624 15.75H19.7432C19.9561 15.75 20.1342 15.8218 20.2777 15.9655C20.4214 16.109 20.4932 16.2872 20.4932 16.5C20.4932 16.7128 20.4214 16.891 20.2777 17.0345C20.1342 17.1782 19.9561 17.25 19.7432 17.25H5.36624ZM18.6202 9.25H4.24324C4.03041 9.25 3.85224 9.17817 3.70874 9.0345C3.56507 8.891 3.49324 8.71283 3.49324 8.5C3.49324 8.28717 3.56507 8.109 3.70874 7.9655C3.85224 7.82183 4.03041 7.75 4.24324 7.75H18.6202L16.297 5.427C16.1483 5.27817 16.075 5.10408 16.077 4.90475C16.0788 4.70542 16.1573 4.52817 16.3125 4.373C16.4677 4.22817 16.6433 4.15317 16.8395 4.148C17.0355 4.143 17.2111 4.218 17.3662 4.373L20.8605 7.86725C20.9542 7.96092 21.0202 8.05967 21.0585 8.1635C21.097 8.26733 21.1162 8.3795 21.1162 8.5C21.1162 8.6205 21.097 8.73267 21.0585 8.8365C21.0202 8.94033 20.9542 9.03908 20.8605 9.13275L17.3662 12.627C17.2277 12.7653 17.0563 12.8362 16.852 12.8395C16.6475 12.8427 16.4677 12.7718 16.3125 12.627C16.1573 12.4718 16.0797 12.2936 16.0797 12.0923C16.0797 11.8911 16.1573 11.7129 16.3125 11.5578L18.6202 9.25Z" fill="currentColor"></path></svg>                        </div>
                         <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
                             <span
                                 className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-zti6pj e1de0imv0"
@@ -115,11 +37,11 @@ const Sessions = () => {
                         </div>
                     </div>
                     <div
-                        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0"
+                        className="hover:text-red MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0"
                         tabindex="0"
                         role="button"
                     >
-                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0">
+                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0 text-black">
                             <svg
                                 width="24"
                                 height="25"
@@ -148,7 +70,7 @@ const Sessions = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
+                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0 tsp-medium text-black">
                             <span
                                 className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-zti6pj e1de0imv0"
                             >Lending &amp; Borrowing</span
@@ -156,16 +78,16 @@ const Sessions = () => {
                         </div>
                     </div>
                     <li
-                        className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-iudm6e e1de0imv0"
+                        className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-iudm6e e1de0imv0 text-black tsp-bold"
                     >
                         Session Zero
                     </li>
                     <div
-                        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0"
+                        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0 hover:text-red"
                         tabindex="0"
                         role="button"
                     >
-                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0">
+                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0 text-black">
                             <svg
                                 width="24"
                                 height="25"
@@ -188,7 +110,7 @@ const Sessions = () => {
                                 ></path>
                             </svg>
                         </div>
-                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
+                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0 text-black">
                             <span
                                 className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-zti6pj e1de0imv0"
                             >Bridged eligible assets</span
@@ -196,11 +118,11 @@ const Sessions = () => {
                         </div>
                     </div>
                     <div
-                        className="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0"
+                        className="hover:text-red MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters e1de0imv0 css-8b1w15 e1de0imv0"
                         tabindex="0"
                         role="button"
                     >
-                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0">
+                        <div className="MuiListItemIcon-root css-kv3wpb e1de0imv0 text-black">
                             <svg
                                 width="24"
                                 height="25"
@@ -217,7 +139,7 @@ const Sessions = () => {
                                 ></path>
                             </svg>
                         </div>
-                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
+                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0 text-black">
                             <span
                                 className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-zti6pj e1de0imv0"
                             >Gas spent on Scroll</span
@@ -227,7 +149,7 @@ const Sessions = () => {
                 </ul>
                 <div className="MuiStack-root css-v5dhkk e1de0imv0">
                     <div
-                        className="MuiBox-root css-1qfjxnd e1de0imv0"
+                        className="MuiBox-root css-1qfjxnd e1de0imv0 mb-5"
                         style={{ opacity: 1, transform: 'none' }}
                     >
                         <p
@@ -641,7 +563,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-170k868 e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/Huma.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/Huma.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -649,8 +571,7 @@ const Sessions = () => {
                                 <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
                                     <span
                                         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1n9wgrp e1de0imv0"
-                                    >Huma</span
-                                    >
+                                    >Huma</span>
                                 </div>
                                 <div
                                     className="MuiBox-root css-c1cd8j e1de0imv0"
@@ -835,7 +756,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/static/media/network-mainnet.4f94c02e1403c0502f29e010159e6214.svg"
+                                            src="https://scroll.io/static/media/network-mainnet.4f94c02e1403c0502f29e010159e6214.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -976,7 +897,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/sUSDe.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/sUSDe.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -988,8 +909,7 @@ const Sessions = () => {
                                         className="MuiTypography-root MuiTypography-body1 css-1uwaazm e1de0imv0"
                                     >
                                             sUSDe / USDe
-                                        </p></span
-                                    >
+                                        </p></span>
                                 </div>
                                 <div
                                     className="MuiBox-root css-c1cd8j e1de0imv0"
@@ -1068,7 +988,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/weETH.png"
+                                            src="https://scroll.io/imgs/sessions/tokens/weETH.png"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1086,8 +1006,7 @@ const Sessions = () => {
                                             href="https://scrollscan.com/token/0x01f0a31698C4d065659b9bdC21B3610292a1c506"
                                             target="_blank"
                                         >0x01f0…c506</a
-                                        ></span
-                                    >
+                                        ></span >
                                 </div>
                                 <div
                                     className="MuiBox-root css-c1cd8j e1de0imv0"
@@ -1117,7 +1036,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/wrsETH.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/wrsETH.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1155,8 +1074,7 @@ const Sessions = () => {
                                     tabindex="0"
                                     href="https://kelpdao.xyz/restake"
                                     target="_blank"
-                                >Go to Kelp</a
-                                >
+                                >Go to Kelp</a>
                             </li>
                             <li
                                 className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-3dfcdh e1de0imv0"
@@ -1166,7 +1084,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/wstETH.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/wstETH.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1215,7 +1133,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/WBTC.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/WBTC.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1264,7 +1182,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/solvBTC.png"
+                                            src="https://scroll.io/imgs/sessions/tokens/solvBTC.png"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1281,9 +1199,7 @@ const Sessions = () => {
                                             className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways e1de0imv0 e1de0imv0 css-z5o2ut e1de0imv0"
                                             href="https://scrollscan.com/token/0x3Ba89d490AB1C0c9CC2313385b30710e838370a4"
                                             target="_blank"
-                                        >0x3Ba8…70a4</a
-                                        ></span
-                                    >
+                                        >0x3Ba8…70a4</a></span>
                                 </div>
                                 <div
                                     className="MuiBox-root css-c1cd8j e1de0imv0"
@@ -1313,7 +1229,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/stone-white.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/stone-white.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1362,7 +1278,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/tokens/Tranchess.svg"
+                                            src="https://scroll.io/imgs/sessions/tokens/Tranchess.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1379,31 +1295,18 @@ const Sessions = () => {
                                             <div
                                                 className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
                                             >
-                                                <img
-                                                    alt="turPSTONE"
-                                                    src="/imgs/sessions/tokens/turPSTONE.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
+
                                             </div>
                                             <div
                                                 className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
                                             >
-                                                <img
-                                                    alt="staYSTONE"
-                                                    src="/imgs/sessions/tokens/staYSTONE.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
+                                                
                                             </div>
                                             <div
                                                 className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
                                             >
-                                                <img
-                                                    alt="stoneQueen"
-                                                    src="/imgs/sessions/tokens/stoneQueen.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div></div
-                                        ></span>
+                                                
+                                            </div></div></span>
                                 </div>
                                 <div
                                     className="MuiBox-root css-c1cd8j e1de0imv0"
@@ -1423,184 +1326,6 @@ const Sessions = () => {
                                     href="https://tranchess.com"
                                     target="_blank"
                                 >Go to Tranchess</a
-                                >
-                            </li>
-                            <li
-                                className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-3dfcdh e1de0imv0"
-                            >
-                                <div className="MuiListItemIcon-root css-81d0ek e1de0imv0">
-                                    <div
-                                        className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
-                                    >
-                                        <img
-                                            src="/imgs/sessions/tokens/Pencils.jpeg"
-                                            className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="MuiListItemText-root css-c9erkg e1de0imv0">
-                                    <span
-                                        className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-ejtg9r e1de0imv0"
-                                    ><p
-                                        className="MuiTypography-root MuiTypography-body1 css-1uwaazm e1de0imv0"
-                                    >
-                                            Assets on Pencils Protocol
-                                        </p>
-                                        <div className="MuiStack-root css-1xhj18k e1de0imv0">
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="ETH"
-                                                    src="/static/media/network-mainnet.4f94c02e1403c0502f29e010159e6214.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="USDC"
-                                                    src="https://scroll-tech.github.io/token-list/data/USDC/logo.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="USDT"
-                                                    src="https://scroll-tech.github.io/token-list/data/USDT/logo.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="weETH"
-                                                    src="/imgs/sessions/tokens/weETH.png"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="wrsETH"
-                                                    src="/imgs/sessions/tokens/wrsETH.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="wstETH"
-                                                    src="https://scroll-tech.github.io/token-list/data/wstETH/logo.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="WBTC"
-                                                    src="/imgs/sessions/tokens/WBTC.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="SolvBTC.b"
-                                                    src="/imgs/sessions/tokens/solvBTC.png"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div>
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="STONE"
-                                                    src="/imgs/sessions/tokens/stone-white.svg"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div></div
-                                        ></span>
-                                </div>
-                                <div
-                                    className="MuiBox-root css-c1cd8j e1de0imv0"
-                                    aria-label="-1"
-                                >
-                                    <div className="MuiStack-root css-ke83yt e1de0imv0">
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-q3em8a e1de0imv0"
-                                        >
-                                            --
-                                        </p>
-                                    </div>
-                                </div>
-                                <a
-                                    className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 css-1mbvmjh e1de0imv0"
-                                    tabindex="0"
-                                    href="https://pencilsprotocol.io/staking"
-                                    target="_blank"
-                                >Go to Pencils</a
-                                >
-                            </li>
-                            <li
-                                className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-3dfcdh e1de0imv0"
-                            >
-                                <div className="MuiListItemIcon-root css-81d0ek e1de0imv0">
-                                    <div
-                                        className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
-                                    >
-                                        <img
-                                            src="/imgs/sessions/tokens/Mitosis.png"
-                                            className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                        />
-                                    </div>
-                                </div>
-                                <div className="MuiListItemText-root css-c9erkg e1de0imv0">
-                                    <span
-                                        className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-ejtg9r e1de0imv0"
-                                    ><p
-                                        className="MuiTypography-root MuiTypography-body1 css-1uwaazm e1de0imv0"
-                                    >
-                                            Assets on Mitosis
-                                        </p>
-                                        <div className="MuiStack-root css-1xhj18k e1de0imv0">
-                                            <div
-                                                className="MuiAvatar-root MuiAvatar-circular css-1mm627t e1de0imv0"
-                                            >
-                                                <img
-                                                    alt="weETH"
-                                                    src="/imgs/sessions/tokens/weETH.png"
-                                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0"
-                                                />
-                                            </div></div
-                                        ></span>
-                                </div>
-                                <div
-                                    className="MuiBox-root css-c1cd8j e1de0imv0"
-                                    aria-label="-1"
-                                >
-                                    <div className="MuiStack-root css-ke83yt e1de0imv0">
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-q3em8a e1de0imv0"
-                                        >
-                                            --
-                                        </p>
-                                    </div>
-                                </div>
-                                <a
-                                    className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 css-1mbvmjh e1de0imv0"
-                                    tabindex="0"
-                                    href="https://app.mitosis.org/?asset=weETH&amp;type=deposit&amp;to=scroll"
-                                    target="_blank"
-                                >Go to Mitosis</a
                                 >
                             </li>
                         </ul>
@@ -1648,7 +1373,7 @@ const Sessions = () => {
                                         className="MuiAvatar-root MuiAvatar-square css-1iiwntp e1de0imv0"
                                     >
                                         <img
-                                            src="/imgs/sessions/gas.svg"
+                                            src="https://scroll.io/imgs/sessions/gas.svg"
                                             className="MuiAvatar-img css-1hy9t21 e1de0imv0"
                                         />
                                     </div>
@@ -1771,15 +1496,14 @@ const Sessions = () => {
                                         You will find most answers here
                                     </p>
                                 </div>
-                            </div></a
-                        ><a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            href="https://tally.so/r/3lNV1B"
-                        ><div
-                            className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-4uazma-card e1de0imv0"
-                        >
+                            </div></a><a
+                                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                href="https://tally.so/r/3lNV1B"
+                            ><div
+                                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-4uazma-card e1de0imv0"
+                            >
                                 <div className="MuiStack-root css-j7qwjs e1de0imv0">
                                     <div className="MuiBox-root css-lk5068-header e1de0imv0">
                                         <svg
@@ -1843,8 +1567,8 @@ const Sessions = () => {
                                         Marks are wrong or missing? Tell us
                                     </p>
                                 </div>
-                            </div></a
-                        ><a
+                            </div></a>
+                        <a
                             className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
                             rel="noopener noreferrer"
                             target="_blank"
