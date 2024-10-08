@@ -11,6 +11,7 @@ import ConnectWalletBtn from '../button/ConnectWalletBtn.jsx'
 import MobileNavContent from './MobileNavContent.jsx'
 import './header.css'
 export default function Header() {
+    //state for mobile navigation
     const [isOpen, setIsOpen] = useState(false);
 
     function closeNav() {
@@ -184,7 +185,7 @@ export default function Header() {
                 </div>
             </header>
 
-            <header className='header-mobile p-8 left-0 right-0 bg-primary   z-50 fixed top-0 lg:hidden'>
+            <header className={`header-mobile p-8 left-0 right-0 bg-primary   z-50 ${isOpen ? 'fixed': ''} top-0 lg:hidden`}>
                 <div className='header-mobile-content flex justify-between items-center'>
                     <div className='header-mobile-logo'>
                         <a className="flex" href="/">
@@ -235,7 +236,10 @@ export default function Header() {
                         </a>
                     </div>
                     <div className='flex items-center gap-6'>
-                        <ConnectWalletBtn />
+
+                        <ConnectWalletBtn variant="nav-btn">
+                            Connect Wallet
+                        </ConnectWalletBtn>
                         <label className="burger" for="burger">
                             <input type="checkbox" id="burger" checked={isOpen} onChange={handleMobileNavMenu} />
                             <span></span>

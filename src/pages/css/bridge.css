@@ -797,6 +797,7 @@
       position: absolute;
       background-color: rgb(255, 104, 75);
       border-radius: 1rem;
+      transition: width 0.25s ease-in-out;
     }
     @media (max-width: 599.95px) {
       .css-fs25ky-mask {
@@ -3575,10 +3576,6 @@
         -webkit-box-pack: center;
         justify-content: center;
       }
-    }
-    .css-et8u9s-cardRoot-selectedCard.css-et8u9s-cardRoot-selectedCard {
-      border: 1px solid rgb(16, 16, 16);
-      background-color: rgb(255, 255, 255);
     }
     .css-ejr6zn-selectedIcon {
       user-select: none;
@@ -8038,13 +8035,7 @@
         padding-left: 4.8rem;
       }
     }
-    .css-fs25ky-mask {
-      width: 4.8rem;
-      height: 100%;
-      position: absolute;
-      background-color: rgb(255, 104, 75);
-      border-radius: 1rem;
-    }
+    
     @media (max-width: 599.95px) {
       .css-fs25ky-mask {
         width: 4.8rem;
@@ -10770,13 +10761,8 @@
     .css-13mgwo4-active {
       color: rgb(255, 248, 243);
     }
-    .css-fs25ky-mask {
-      width: 4.8rem;
-      height: 100%;
-      position: absolute;
-      background-color: rgb(255, 104, 75);
-      border-radius: 1rem;
-    }
+
+
     @media (max-width: 599.95px) {
       .css-fs25ky-mask {
         width: 4.8rem;
@@ -13790,6 +13776,14 @@
       background-color: rgb(255, 255, 255);
       width: 25rem;
     }
+
+    .css-fadi07-wrapper:hover .css-fs25ky-mask {
+      width: 100%;
+    }
+
+    .css-fadi07-wrapper:hover button {
+      color: white ;
+    }
     @media (max-width: 599.95px) {
       .css-fadi07-wrapper {
         width: 25rem;
@@ -14844,14 +14838,6 @@
         -webkit-box-pack: center;
         justify-content: center;
       }
-    }
-    .css-et8u9s-cardRoot-selectedCard.css-et8u9s-cardRoot-selectedCard {
-      border: 1px solid rgb(16, 16, 16);
-      background-color: rgb(255, 255, 255);
-    }
-    .css-et8u9s-cardRoot-selectedCard.css-et8u9s-cardRoot-selectedCard {
-      border: 1px solid rgb(16, 16, 16);
-      background-color: rgb(255, 255, 255);
     }
     .css-ejr6zn-selectedIcon {
       user-select: none;
