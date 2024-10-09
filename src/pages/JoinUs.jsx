@@ -197,7 +197,7 @@ export default function JoinUs() {
           </div>
 
           <div className="MuiContainer-root MuiContainer-maxWidthLg css-ykub03 e1de0imv0">
-            <p className="MuiTypography-root MuiTypography-body1 css-o03vaz e1de0imv0">Learn more</p>
+            <p className="MuiTypography-root MuiTypography-body1 css-o03vaz e1de0imv0 tsp-bold">Learn more</p>
             <div className="MuiBox-root css-10h4y2l-grid e1de0imv0" style={{ opacity: 1 }}>
 
               <div className="MuiBox-root css-0 e1de0imv0" style={{ opacity: 1, transform: "translateY(0px) rotateY(0deg) translateZ(0px)" }}>
@@ -254,17 +254,7 @@ export default function JoinUs() {
                 Join Scroll and contribute in <br /> building the best L2 product in the web3 world.
               </p>
             </div>
-            <div className="MuiBox-root css-14kbqku-wrapper e1de0imv0">
-              <span className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium e1de0imv0 css-wgwcyq-icon e1de0imv0" tabIndex="-1" role="button" aria-disabled="true">
-                <svg fill="none" height="16" viewBox="0 0 21 16" width="21" xmlns="http://www.w3.org/2000/svg" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jbxkcd e1de0imv0" focusable="false" aria-hidden="true">
-                  <path d="m21 8.00267-8.3996 7.99733v-2.7067l4.5767-4.35752c-5.7251-.08013-11.45204.31876-17.1565267.05877l-.02057369-1.96951c5.68391039.23862 11.34730039-.1389 17.03120039-.06055l-4.4308-4.21858v-2.74591055l8.3996 7.99733055z" fill="currentColor"></path>
-                </svg>
-              </span>
-              <div className="css-fs25ky-mask" style={{ width: '4.8rem' }}></div>
-              <a className="MuiButtonBase-root css-6k4tt-button e1de0imv0" tabIndex="0" href="https://boards.greenhouse.io/scrollio" target="_blank" rel="noopener noreferrer">
-                View open positions
-              </a>
-            </div>
+          <Button>View Open Positions</Button>
           </div>
           {/* join scroll and contribute */}
 

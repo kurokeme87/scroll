@@ -342,7 +342,7 @@ function InnerWithdrawTabContent() {
 
 function ClaimTabContent() {
     return (
-        <div className='h-[80vh] min-h-[400px] flex items-center justify-center border-2 border-red-500'>
+        <div className='h-[80vh] min-h-[400px] flex items-center justify-center '>
             <div className="MuiTabPanel-root css-10c4shx-tabPanel e1de0imv0" role="tabpanel" aria-labelledby="mui-p-91539-T-2" id="mui-p-91539-P-2">
                 <div className="MuiBox-root css-qocfh-tableBox e1de0imv0">
                     <div className="MuiStack-root css-l4h50r e1de0imv0">
