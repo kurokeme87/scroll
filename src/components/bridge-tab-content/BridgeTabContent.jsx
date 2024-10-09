@@ -1,6 +1,8 @@
 import React from 'react'
 import ConnectWalletBtn from '../button/ConnectWalletBtn.jsx'
 import { useState } from 'react'
+import eth from '../../assets/ethereum.svg'
+import arrowDown from '../../assets/arrow-down.svg'
 
 
 function WithdrawTabContent() {
@@ -19,7 +21,7 @@ function DepositTabContent() {
             aria-labelledby="mui-p-49779-T-Deposit" id="mui-p-49779-P-Deposit">
             <div className="MuiStack-root css-dvxtzn e1de0imv0">
                 <div className="MuiStack-root css-f5nr1t e1de0imv0">
-                    <p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0">
+                    <p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0 !font-sans">
                         From
                     </p>
                     <div
@@ -42,7 +44,7 @@ function DepositTabContent() {
                                 <path d="M6.75 12.1651L12.3735 15.4298V9.65405L6.75 12.1651Z" fill="white"
                                     fillOpacity="0.602"></path>
                             </g>
-                        </svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0">Ethereum
+                        </svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0 !font-sans font-bold">Ethereum
                         </span>
                     </div>
                     <p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0">
@@ -78,34 +80,30 @@ function DepositTabContent() {
                             <path
                                 d="M15.7326 10.68H9.63428V9.80176H15.7269C15.9613 9.80176 16.1556 9.99497 16.1556 10.2409C16.1613 10.4809 15.967 10.68 15.7326 10.68Z"
                                 fill="#101010"></path>
-                        </svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0">Scroll
+                        </svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0 !font-sans font-bold">Scroll
                         </span>
                     </div>
                 </div>
-                <div className="MuiStack-root css-syghad-root e1de0imv0">
+                <div className="MuiStack-root flex e1de0imv0 w-full gap-4">
                     <div
                         className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0">
                         <input aria-invalid="false" disabled="" placeholder="0.0000" type="text"
                             className="MuiInputBase-input Mui-disabled css-5v49rv-input e1de0imv0" />
                     </div>
-                    <li
-                        className="MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled MuiMenuItem-root Mui-disabled MuiMenuItem-gutters e1de0imv0 css-hhaj72-menuItem-menuItem e1de0imv0"
-                        tabIndex="-1" role="menuitem" aria-disabled="true" value="[object Object]">
-                        <div className="MuiListItemIcon-root css-302txs-listItemIcon e1de0imv0">
-                            <div className="MuiAvatar-root MuiAvatar-circular css-1ykjr5a e1de0imv0">
-                                <img src="/static/media/network-mainnet.4f94c02e1403c0502f29e010159e6214.svg"
-                                    className="MuiAvatar-img css-1hy9t21 e1de0imv0" />
-                            </div>
+                    <li className="bg-[#fff5e8] p-[14px]  flex justify-between items-center border border-gray-400  min-w-[100px] w-[30%] rounded-2xl" tabIndex="-1" role="menuitem" aria-disabled="true" value="[object Object]">
+                        {/* eth logo */}
+                        <div className='opacity-40'>
+                            <img src={eth} alt="bro" />
                         </div>
-                        <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
-                            <span
-                                className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-9onabq-listItemText e1de0imv0">ETH</span>
+                        {/* eth logo */}
+                        <div className=" text-gray-500 text-3xl !font-[700]">
+                            ETH
                         </div>
-                        <svg width="13" height="6" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M7.71802 6L5.28198 6L-4.29138e-07 -1.82822e-07L2.43314 2.98901e-08L6.52325 4.65362C7.90116 3.09091 9.04942 1.56272 10.564 7.40708e-07L13 9.53674e-07C10.9797 2 9.73837 4 7.71802 6Z"
-                                fill="currentColor"></path>
-                        </svg>
+
+                        <div>
+                            <img src={arrowDown} alt="" />
+                        </div>
+
                     </li>
                 </div>
                 <div className="MuiStack-root css-1is5fpd e1de0imv0">
@@ -148,8 +146,8 @@ function DepositTabContent() {
                 </div>
                 <div className="MuiBox-root  css-8atqhb e1de0imv0">
                     <div className=" MuiStack-root css-1rvccqv e1de0imv0 sm:flex-row sm:flex flex-col">
-                        <div    
-                            className={`e1de0imv0 css-et8u9s-cardRoot-selectedCard e1de0imv0 ${selectedPlan === "economy" ? 'outline outline-black outline-[1px]' : 'outline-[1px] outline outline-transparent'}`}
+                        <div
+                            className={`e1de0imv0 css-et8u9s-cardRoot-selectedCard e1de0imv0 ${selectedPlan === "economy" ? 'outline outline-black outline-[1px] bg-white' : 'outline-[1px] outline outline-transparent'}`}
                             role="button" tabIndex="0" onClick={() => setSelectedPlan("economy")}>
                             {/* mark */}
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +193,7 @@ function DepositTabContent() {
                             </div>
                         </div>
                         <div
-                            className={`MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root e1de0imv0 css-g1mupx-cardRoot e1de0imv0 ${selectedPlan === "fast" ? 'outline outline-black outline-[1px]' : 'outline-[1px] outline outline-transparent'}`}
+                            className={`MuiPaper-root MuiPaper-outlined MuiPaper-rounded MuiCard-root e1de0imv0 css-g1mupx-cardRoot e1de0imv0 ${selectedPlan === "fast" ? 'outline outline-black outline-[1px] bg-white' : 'outline-[1px] outline outline-transparent'}`}
                             role="button" tabIndex="0" onClick={() => setSelectedPlan("fast")}>
                             {/* mark */}
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -264,25 +262,57 @@ function InnerWithdrawTabContent() {
     return (
         <div className='pb-10'>
             {/* inner content for withdraw */}
-            <div className="MuiStack-root css-f5nr1t e1de0imv0 tsp-bold mt-7"><p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0">From</p><div className="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-14zhrg4-chip e1de0imv0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1tgacyq-icon e1de0imv0" focusable="false" aria-hidden="true"><path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"></path><path d="M18.1656 14.7728V6.16602C18.1541 5.44585 17.594 4.86621 16.891 4.86621H8.12354C6.23173 4.89549 4.71143 6.48218 4.71143 8.42603C4.71143 9.08179 4.88289 9.64387 5.1458 10.1357C5.3687 10.5455 5.71734 10.932 6.06027 11.2189C6.15743 11.3008 6.11171 11.2657 6.40891 11.4531C6.82042 11.7107 7.28909 11.8395 7.28909 11.8395L7.28337 16.986C7.2948 17.2319 7.31766 17.4661 7.38053 17.6827C7.57486 18.4088 8.06639 18.965 8.73509 19.2343C9.01515 19.3456 9.3295 19.4217 9.66671 19.4275L16.6681 19.4509C18.0627 19.4509 19.1943 18.2917 19.1943 16.8572C19.2001 16.0082 18.7885 15.2471 18.1656 14.7728Z" fill="#FFEEDA"></path><path d="M18.3371 16.9206C18.3085 17.8398 17.5712 18.5775 16.6682 18.5775L11.8501 18.5599C12.233 18.1033 12.4674 17.5119 12.4674 16.8679C12.4674 15.8549 11.8787 15.1582 11.8787 15.1582H16.6739C17.5941 15.1582 18.3428 15.9252 18.3428 16.8679L18.3371 16.9206Z" fill="#EBC28E"></path><path d="M6.51799 10.4958C5.96359 9.95711 5.57494 9.26037 5.57494 8.43482V8.347C5.62067 6.93595 6.75232 5.80009 8.12974 5.7591H16.8972C17.1258 5.77081 17.3087 5.93475 17.3087 6.1748V13.7746C17.5088 13.8097 17.6059 13.839 17.8003 13.9092C17.9546 13.9678 18.166 14.0907 18.166 14.0907V6.1748C18.1546 5.45464 17.5945 4.875 16.8915 4.875H8.12403C6.23222 4.90427 4.71191 6.49097 4.71191 8.43482C4.71191 9.56483 5.21487 10.5309 6.0379 11.2101C6.09505 11.2569 6.14649 11.3155 6.29509 11.3155C6.55228 11.3155 6.73518 11.1047 6.72375 10.8763C6.71803 10.6831 6.63802 10.6129 6.51799 10.4958Z" fill="#101010"></path><path d="M16.6699 14.2733H9.79426C9.33131 14.2791 8.95981 14.6597 8.95981 15.134V16.1469C8.97124 16.6153 9.35989 17.0134 9.82284 17.0134H10.3315V16.1469H9.82284V15.1574C9.82284 15.1574 9.94858 15.1574 10.1029 15.1574C10.9716 15.1574 11.6118 15.9829 11.6118 16.867C11.6118 17.6516 10.9145 18.6528 9.74854 18.5708C8.71404 18.5006 8.15393 17.5579 8.15393 16.867V8.28365C8.15393 7.89722 7.8453 7.58105 7.46808 7.58105H6.78223V8.4593H7.2909V16.8729C7.26232 18.5825 8.47971 19.4432 9.74854 19.4432L16.6756 19.4666C18.0702 19.4666 19.2019 18.3074 19.2019 16.8729C19.2019 15.4384 18.0645 14.2733 16.6699 14.2733ZM18.3388 16.9256C18.3103 17.8448 17.573 18.5825 16.6699 18.5825L11.8518 18.565C12.2348 18.1083 12.4691 17.5169 12.4691 16.8729C12.4691 15.86 11.8804 15.1632 11.8804 15.1632H16.6756C17.5958 15.1632 18.3446 15.9302 18.3446 16.8729L18.3388 16.9256Z" fill="#101010"></path><path d="M14.8182 8.61848H9.63428V7.74023H14.8182C15.0525 7.74023 15.2468 7.93345 15.2468 8.17936C15.2468 8.41941 15.0582 8.61848 14.8182 8.61848Z" fill="#101010"></path><path d="M14.8182 12.7503H9.63428V11.8721H14.8182C15.0525 11.8721 15.2468 12.0653 15.2468 12.3112C15.2468 12.5512 15.0582 12.7503 14.8182 12.7503Z" fill="#101010"></path><path d="M15.7326 10.68H9.63428V9.80176H15.7269C15.9613 9.80176 16.1556 9.99497 16.1556 10.2409C16.1613 10.4809 15.967 10.68 15.7326 10.68Z" fill="#101010"></path></svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0">Scroll </span></div><p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0">To</p><div className="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-14zhrg4-chip e1de0imv0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1tgacyq-icon e1de0imv0" focusable="false" aria-hidden="true"><g><path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#627EEA"></path><path d="M12.3735 3V9.6525L17.9963 12.165L12.3735 3Z" fill="white" fill-opacity="0.602"></path><path d="M12.3735 3L6.75 12.165L12.3735 9.6525V3Z" fill="white"></path><path d="M12.3735 16.4759V20.9962L18 13.2119L12.3735 16.4759Z" fill="white" fill-opacity="0.602"></path><path d="M12.3735 20.9962V16.4752L6.75 13.2119L12.3735 20.9962Z" fill="white"></path><path d="M12.3735 15.4298L17.9963 12.1651L12.3735 9.65405V15.4298Z" fill="white" fill-opacity="0.2"></path><path d="M6.75 12.1651L12.3735 15.4298V9.65405L6.75 12.1651Z" fill="white" fill-opacity="0.602"></path></g></svg><span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0">Ethereum </span></div></div>
+            <div className="MuiStack-root css-f5nr1t e1de0imv0 tsp-bold mt-7">
+                <p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0 !font-sans ">From</p>
+                <div className="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-14zhrg4-chip e1de0imv0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1tgacyq-icon e1de0imv0" focusable="false" aria-hidden="true">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="white"></path>
+                        <path d="M18.1656 14.7728V6.16602C18.1541 5.44585 17.594 4.86621 16.891 4.86621H8.12354C6.23173 4.89549 4.71143 6.48218 4.71143 8.42603C4.71143 9.08179 4.88289 9.64387 5.1458 10.1357C5.3687 10.5455 5.71734 10.932 6.06027 11.2189C6.15743 11.3008 6.11171 11.2657 6.40891 11.4531C6.82042 11.7107 7.28909 11.8395 7.28909 11.8395L7.28337 16.986C7.2948 17.2319 7.31766 17.4661 7.38053 17.6827C7.57486 18.4088 8.06639 18.965 8.73509 19.2343C9.01515 19.3456 9.3295 19.4217 9.66671 19.4275L16.6681 19.4509C18.0627 19.4509 19.1943 18.2917 19.1943 16.8572C19.2001 16.0082 18.7885 15.2471 18.1656 14.7728Z" fill="#FFEEDA"></path>
+                        <path d="M18.3371 16.9206C18.3085 17.8398 17.5712 18.5775 16.6682 18.5775L11.8501 18.5599C12.233 18.1033 12.4674 17.5119 12.4674 16.8679C12.4674 15.8549 11.8787 15.1582 11.8787 15.1582H16.6739C17.5941 15.1582 18.3428 15.9252 18.3428 16.8679L18.3371 16.9206Z" fill="#EBC28E"></path>
+                        <path d="M6.51799 10.4958C5.96359 9.95711 5.57494 9.26037 5.57494 8.43482V8.347C5.62067 6.93595 6.75232 5.80009 8.12974 5.7591H16.8972C17.1258 5.77081 17.3087 5.93475 17.3087 6.1748V13.7746C17.5088 13.8097 17.6059 13.839 17.8003 13.9092C17.9546 13.9678 18.166 14.0907 18.166 14.0907V6.1748C18.1546 5.45464 17.5945 4.875 16.8915 4.875H8.12403C6.23222 4.90427 4.71191 6.49097 4.71191 8.43482C4.71191 9.56483 5.21487 10.5309 6.0379 11.2101C6.09505 11.2569 6.14649 11.3155 6.29509 11.3155C6.55228 11.3155 6.73518 11.1047 6.72375 10.8763C6.71803 10.6831 6.63802 10.6129 6.51799 10.4958Z" fill="#101010"></path>
+                        <path d="M16.6699 14.2733H9.79426C9.33131 14.2791 8.95981 14.6597 8.95981 15.134V16.1469C8.97124 16.6153 9.35989 17.0134 9.82284 17.0134H10.3315V16.1469H9.82284V15.1574C9.82284 15.1574 9.94858 15.1574 10.1029 15.1574C10.9716 15.1574 11.6118 15.9829 11.6118 16.867C11.6118 17.6516 10.9145 18.6528 9.74854 18.5708C8.71404 18.5006 8.15393 17.5579 8.15393 16.867V8.28365C8.15393 7.89722 7.8453 7.58105 7.46808 7.58105H6.78223V8.4593H7.2909V16.8729C7.26232 18.5825 8.47971 19.4432 9.74854 19.4432L16.6756 19.4666C18.0702 19.4666 19.2019 18.3074 19.2019 16.8729C19.2019 15.4384 18.0645 14.2733 16.6699 14.2733ZM18.3388 16.9256C18.3103 17.8448 17.573 18.5825 16.6699 18.5825L11.8518 18.565C12.2348 18.1083 12.4691 17.5169 12.4691 16.8729C12.4691 15.86 11.8804 15.1632 11.8804 15.1632H16.6756C17.5958 15.1632 18.3446 15.9302 18.3446 16.8729L18.3388 16.9256Z" fill="#101010"></path>
+                        <path d="M14.8182 8.61848H9.63428V7.74023H14.8182C15.0525 7.74023 15.2468 7.93345 15.2468 8.17936C15.2468 8.41941 15.0582 8.61848 14.8182 8.61848Z" fill="#101010"></path>
+                        <path d="M14.8182 12.7503H9.63428V11.8721H14.8182C15.0525 11.8721 15.2468 12.0653 15.2468 12.3112C15.2468 12.5512 15.0582 12.7503 14.8182 12.7503Z" fill="#101010"></path>
+                        <path d="M15.7326 10.68H9.63428V9.80176H15.7269C15.9613 9.80176 16.1556 9.99497 16.1556 10.2409C16.1613 10.4809 15.967 10.68 15.7326 10.68Z" fill="#101010"></path>
+                    </svg>
+                    <span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0 !font-sans font-bold">Scroll </span>
+                </div>
+                <p className="MuiTypography-root MuiTypography-body1 css-e7h3go e1de0imv0">To</p>
+                <div className="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-14zhrg4-chip e1de0imv0">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-icon MuiChip-iconMedium MuiChip-iconColorDefault css-1tgacyq-icon e1de0imv0" focusable="false" aria-hidden="true">
+                        <g>
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#627EEA"></path>
+                            <path d="M12.3735 3V9.6525L17.9963 12.165L12.3735 3Z" fill="white" fillOpacity="0.602"></path>
+                            <path d="M12.3735 3L6.75 12.165L12.3735 9.6525V3Z" fill="white"></path>
+                            <path d="M12.3735 16.4759V20.9962L18 13.2119L12.3735 16.4759Z" fill="white" fillOpacity="0.602"></path>
+                            <path d="M12.3735 20.9962V16.4752L6.75 13.2119L12.3735 20.9962Z" fill="white"></path>
+                            <path d="M12.3735 15.4298L17.9963 12.1651L12.3735 9.65405V15.4298Z" fill="white" fillOpacity="0.2"></path>
+                            <path d="M6.75 12.1651L12.3735 15.4298V9.65405L6.75 12.1651Z" fill="white" fillOpacity="0.602"></path>
+                        </g>
+                    </svg>
+                    <span className="MuiChip-label MuiChip-labelMedium css-1agl0vi-chipLabel e1de0imv0 !font-sans font-bold">Ethereum </span>
+                </div>
+            </div>
             {/* input section */}
 
-            <div className="MuiStack-root css-syghad-root e1de0imv0">
-                <div className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0">
+            <div className="flex gap-4">
+                <div className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0 ">
                     <input aria-invalid="false" disabled="" placeholder="0.0000" type="text" className="MuiInputBase-input Mui-disabled css-5v49rv-input e1de0imv0" value="" />
                 </div>
-                <li className="MuiButtonBase-root MuiMenuItem-root Mui-disabled MuiMenuItem-gutters Mui-disabled MuiMenuItem-root Mui-disabled MuiMenuItem-gutters e1de0imv0 css-hhaj72-menuItem-menuItem e1de0imv0" tabIndex="-1" role="menuitem" aria-disabled="true" value="[object Object]">
-                    <div className="MuiListItemIcon-root css-302txs-listItemIcon e1de0imv0">
-                        <div className="MuiAvatar-root MuiAvatar-circular css-1ykjr5a e1de0imv0">
-                            <img src="/static/media/network-mainnet.4f94c02e1403c0502f29e010159e6214.svg" className="MuiAvatar-img css-1hy9t21 e1de0imv0" alt="" />
-                        </div>
+                <li className="bg-[#fff5e8] p-[14px] flex justify-between items-center border border-gray-400 w-[20%]  min-w-[120px] rounded-2xl" tabIndex="-1" role="menuitem" aria-disabled="true" value="[object Object]">
+                    {/* eth logo */}
+                    <div className='opacity-40'>
+                        <img src={eth} alt="bro" />
                     </div>
-                    <div className="MuiListItemText-root css-1tsvksn e1de0imv0">
-                        <span className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-9onabq-listItemText e1de0imv0">ETH</span>
+                    {/* eth logo */}
+                    <div className="text-3xl text-gray-500 font-extrabold">
+                        ETH
                     </div>
-                    <svg width="13" height="6" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.71802 6L5.28198 6L-4.29138e-07 -1.82822e-07L2.43314 2.98901e-08L6.52325 4.65362C7.90116 3.09091 9.04942 1.56272 10.564 7.40708e-07L13 9.53674e-07C10.9797 2 9.73837 4 7.71802 6Z" fill="currentColor"></path>
-                    </svg>
+
+                    <div>
+                        <img src={arrowDown} alt="" />
+                    </div>
+
                 </li>
             </div>
 

@@ -19,9 +19,8 @@ export default function Bridge() {
     const handleModalOpen = () => {
         setModalOpen(!modalOpen);
     }
-
+    
     return (
-
         <div>
             <Modal open={modalOpen} setOpen={setModalOpen} />
             <div className="MuiBox-root css-14i99rr e1de0imv0">
