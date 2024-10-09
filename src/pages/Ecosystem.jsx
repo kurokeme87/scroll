@@ -7,6 +7,8 @@ import Slider from 'react-slick';
 //imports for react spring animations
 import { useSpring, animated } from 'react-spring'
 
+import Button from '../components/button/Button.jsx'
+
 
 //custom component for number animation using react spring
 //counter animation
@@ -138,36 +140,7 @@ export default function Ecosystem() {
                         >
                             Ecosystem highlights
                         </p>
-                        <div className="MuiBox-root css-14kbqku-wrapper e1de0imv0">
-                            <span
-                                className="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeMedium e1de0imv0 css-wgwcyq-icon e1de0imv0"
-                                tabIndex="-1"
-                                role="button"
-                                aria-disabled="true"
-                            ><svg
-                                fill="none"
-                                height="16"
-                                viewBox="0 0 21 16"
-                                width="21"
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1jbxkcd e1de0imv0"
-                                focusable="false"
-                                aria-hidden="true"
-                            >
-                                    <path
-                                        d="m21 8.00267-8.3996 7.99733v-2.7067l4.5767-4.35752c-5.7251-.08013-11.45204.31876-17.1565267.05877l-.02057369-1.96951c5.68391039.23862 11.34730039-.1389 17.03120039-.06055l-4.4308-4.21858v-2.74591055l8.3996 7.99733055z"
-                                        fill="currentColor"
-                                    ></path></svg
-                                ></span>
-                            <div className="css-fs25ky-mask" style={{ width: "4.8rem" }}></div>
-                            <button
-                                className="MuiButtonBase-root css-6k4tt-button e1de0imv0"
-                                tabIndex="0"
-                                type="button"
-                            >
-                                Read more
-                            </button>
-                        </div>
+                      <Button>Read More</Button>
                     </div>
                     <div className="swiper swiper-initialized swiper-horizontal css-hfpyip e1de0imv0 swiper-backface-hidden" >
                         <div className='slider-carousel'>
@@ -395,7 +368,7 @@ export default function Ecosystem() {
                     </div>
                 </div>
             </div>
-            <div className="MuiBox-root css-14i99rr e1de0imv0">
+            <div className="MuiBox-root css-14i99rr e1de0imv0 pb-20">
                 <div
                     className="MuiContainer-root MuiContainer-maxWidthLg css-1oystyc e1de0imv0"
                 >
@@ -2526,295 +2499,11 @@ export default function Ecosystem() {
                                 </div>
                             </div>
                         </div>
-                        <div className="MuiBox-root css-1jq1uag e1de0imv0">
-                            <button
-                                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button e1de0imv0 e1de0imv0 css-woik4h e1de0imv0"
-                                rel="noopener noreferrer"
-                                target=""
-                            >
-                                Load more
-                            </button>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
-            <div className="MuiBox-root css-14i99rr e1de0imv0">
-                <div
-                    className="MuiContainer-root MuiContainer-maxWidthLg css-4isjkk e1de0imv0"
-                >
-                    <p
-                        className="MuiTypography-root MuiTypography-body1 css-1egha00 e1de0imv0"
-                    >
-                        Contribute to the ecosystem
-                    </p>
-                    <div
-                        className="MuiBox-root css-e9gm5-flex e1de0imv0"
-                        style={{ opacity: 0 }}
-                    >
-                        <div
-                            className="MuiBox-root css-y0g3m5-flexItem e1de0imv0"
-                            style={{
-                                opacity: 0,
-                                transform: 'translateY(100px) rotateY(0deg) translateZ(0px)'
-                            }}
-                        >
-                            <a
-                                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                href="https://tally.so/r/waxLBW"
-                            ><div
-                                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-19g2xjx-card e1de0imv0"
-                            >
-                                    <div className="MuiStack-root css-j7qwjs e1de0imv0">
-                                        <div className="MuiBox-root css-lk5068-header e1de0imv0">
-                                            <svg
-                                                width="23"
-                                                height="23"
-                                                viewBox="0 0 23 23"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ohh97 e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <g clip-path="url(#clip0_1438_4428)">
-                                                    <path
-                                                        d="M23 0V17.5449L20.0307 14.5756V5.01873C13.9652 10.9103 8.42164 17.3266 2.18206 23L0 20.8621C6.19815 15.1888 11.6947 8.86081 17.7189 3.01069H8.46583L5.45515 0H23Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1438_4428">
-                                                        <rect
-                                                            width="23"
-                                                            height="23"
-                                                            fill="white"
-                                                        ></rect>
-                                                    </clipPath>
-                                                </defs></svg
-                                            ><svg
-                                                width="32"
-                                                height="32"
-                                                viewBox="0 0 32 32"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-akkb8w e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <g clip-path="url(#clip0_1412_1063)">
-                                                    <path
-                                                        d="M15.4934 14.0178C15.4934 13.4933 15.0667 13.0667 14.5423 13.0667H4.7467C4.22225 13.0667 3.79559 13.4933 3.79559 14.0178C3.79559 14.5422 4.22225 14.9689 4.7467 14.9689H14.5423C15.0667 14.9689 15.4934 14.5422 15.4934 14.0178Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                    <path
-                                                        d="M4.7467 16.8711C4.22225 16.8711 3.79559 17.2978 3.79559 17.8222C3.79559 18.3467 4.22225 18.7733 4.7467 18.7733H10.6934C11.2178 18.7733 11.6445 18.3467 11.6445 17.8222C11.6445 17.2978 11.2178 16.8711 10.6934 16.8711H4.7467Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                    <path
-                                                        d="M6.9867 26H3.80448C2.75559 26 1.90225 25.1467 1.90225 24.0978V7.35999C1.90225 6.3111 2.75559 5.45776 3.80448 5.45776H15.4934C16.5423 5.45776 17.3956 6.3111 17.3956 7.35999V13.2089C17.3956 13.7333 17.8223 14.16 18.3467 14.16C18.8711 14.16 19.2978 13.7333 19.2978 13.2089V7.35999C19.2978 5.26221 17.5911 3.55554 15.4934 3.55554H3.80448C1.7067 3.55554 3.05176e-05 5.26221 3.05176e-05 7.35999V24.0978C3.05176e-05 26.1955 1.7067 27.9022 3.80448 27.9022H6.9867C7.51114 27.9022 7.93781 27.4755 7.93781 26.9511C7.93781 26.4267 7.51114 26 6.9867 26Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                    <path
-                                                        d="M20.9867 17.3244C19.8756 16.2133 18.0623 16.2133 16.9511 17.3244L11.7334 22.5333C11.6267 22.64 11.5378 22.7822 11.4934 22.9333L10.3556 26.6755C10.2578 27.0044 10.3467 27.3689 10.5867 27.6178C10.7645 27.8044 11.0134 27.9022 11.2711 27.9022C11.36 27.9022 11.44 27.8933 11.5289 27.8667L15.3689 26.8C15.5289 26.7555 15.6711 26.6755 15.7867 26.56L20.9956 21.36C22.1067 20.2489 22.1067 18.4355 20.9956 17.3244H20.9867ZM14.6134 25.04L12.6845 25.5733L13.2534 23.7155L16.7734 20.2044L18.1156 21.5467L14.6134 25.04ZM19.6445 20.0178L19.4578 20.2044L18.1156 18.8622L18.3023 18.6755C18.6756 18.3022 19.28 18.3022 19.6445 18.6755C20.0089 19.0489 20.0178 19.6533 19.6445 20.0178Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                    <path
-                                                        d="M14.5423 9.26221H4.7467C4.22225 9.26221 3.79559 9.68888 3.79559 10.2133C3.79559 10.7378 4.22225 11.1644 4.7467 11.1644H14.5423C15.0667 11.1644 15.4934 10.7378 15.4934 10.2133C15.4934 9.68888 15.0667 9.26221 14.5423 9.26221Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1412_1063">
-                                                        <rect
-                                                            width="21.8133"
-                                                            height="24.3467"
-                                                            fill="white"
-                                                            transform="translate(3.05176e-05 3.55554)"
-                                                        ></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 css-y9e1y0 e1de0imv0"
-                                        >
-                                            Get in touch
-                                        </p>
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 css-18gzr4m e1de0imv0"
-                                        >
-                                            Reach out directly if you need more support for your
-                                            project.
-                                        </p>
-                                    </div>
-                                </div></a
-                            >
-                        </div>
-                        <div
-                            className="MuiBox-root css-y0g3m5-flexItem e1de0imv0"
-                            style={{
-                                opacity: 0,
-                                transform: 'translateY(100px) rotateY(0deg) translateZ(0px)'
-                            }}
-                        >
-                            <a
-                                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                href="https://tally.so/r/3jlj59"
-                            ><div
-                                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-19g2xjx-card e1de0imv0"
-                            >
-                                    <div className="MuiStack-root css-j7qwjs e1de0imv0">
-                                        <div className="MuiBox-root css-lk5068-header e1de0imv0">
-                                            <svg
-                                                width="23"
-                                                height="23"
-                                                viewBox="0 0 23 23"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ohh97 e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <g clip-path="url(#clip0_1438_4428)">
-                                                    <path
-                                                        d="M23 0V17.5449L20.0307 14.5756V5.01873C13.9652 10.9103 8.42164 17.3266 2.18206 23L0 20.8621C6.19815 15.1888 11.6947 8.86081 17.7189 3.01069H8.46583L5.45515 0H23Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1438_4428">
-                                                        <rect
-                                                            width="23"
-                                                            height="23"
-                                                            fill="white"
-                                                        ></rect>
-                                                    </clipPath>
-                                                </defs></svg
-                                            ><svg
-                                                width="32"
-                                                height="32"
-                                                viewBox="0 0 32 32"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-akkb8w e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <path
-                                                    d="M23.3958 17.1644L16.9958 23.8044C16.7825 24.0267 16.4981 24.1511 16.1958 24.1511C15.8936 24.1511 15.6269 24.0444 15.4225 23.84C15.2092 23.6356 15.0847 23.36 15.0758 23.0578C15.0758 22.7556 15.1825 22.48 15.3869 22.2667L21.7692 15.6444C22.7558 14.5511 23.2803 13.1289 23.2447 11.6356C23.2092 10.2133 22.6581 8.87111 21.6892 7.84889C20.7292 6.84444 19.4669 6.26667 18.1336 6.23111H17.9736C16.2669 6.23111 14.6581 7.10222 13.6625 8.57778C13.4581 8.88889 13.1114 9.06667 12.7381 9.06667C12.3647 9.06667 12.0181 8.88 11.8136 8.57778C10.8269 7.11111 9.21806 6.23111 7.51139 6.23111C6.13361 6.23111 4.85361 6.79111 3.86694 7.78667C2.81806 8.84444 2.2225 10.3289 2.24028 11.84C2.24917 13.3156 2.80917 14.7022 3.80472 15.7511L13.5558 25.8311C13.9825 26.2756 13.9736 26.9867 13.5292 27.4133C13.3158 27.6178 13.0403 27.7244 12.7558 27.7244C12.4447 27.7244 12.1603 27.6 11.9558 27.3867L2.18694 17.2889C0.791389 15.8311 0.0180558 13.9022 0.000278029 11.8578C-0.0174997 9.75111 0.818056 7.69778 2.28472 6.22222C3.68917 4.8 5.52917 4.00889 7.48472 4C9.4225 4 11.2536 4.74667 12.6492 6.10667L12.7469 6.20444L12.8447 6.10667C14.2314 4.75556 16.0536 4 17.9647 4H18.2136C20.1425 4.06222 21.9558 4.88889 23.3158 6.32C24.6669 7.73333 25.4403 9.60889 25.4847 11.5911C25.5381 13.6889 24.7914 15.6622 23.3958 17.1644Z"
-                                                    fill="#101010"
-                                                ></path>
-                                            </svg>
-                                        </div>
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 css-y9e1y0 e1de0imv0"
-                                        >
-                                            Request a dApp
-                                        </p>
-                                        <p
-                                            className="tsp-bold text-black"
-                                        >
-                                            Can’t find the application you’re looking for? We want
-                                            to know!
-                                        </p>
-                                    </div>
-                                </div></a
-                            >
-                        </div>
-                        <div
-                            className="MuiBox-root css-y0g3m5-flexItem e1de0imv0"
-                            style={{
-                                opacity: 0,
-                                transform: 'translateY(100px) rotateY(0deg) translateZ(0px)'
-                            }}
-                        >
-                            <a
-                                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                                rel="noopener noreferrer"
-                                target="_blank"
-                                href="https://docs.scroll.io/en/getting-started/overview/"
-                            ><div
-                                className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-19g2xjx-card e1de0imv0"
-                            >
-                                    <div className="MuiStack-root css-j7qwjs e1de0imv0">
-                                        <div className="MuiBox-root css-lk5068-header e1de0imv0">
-                                            <svg
-                                                width="23"
-                                                height="23"
-                                                viewBox="0 0 23 23"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1ohh97 e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <g clip-path="url(#clip0_1438_4428)">
-                                                    <path
-                                                        d="M23 0V17.5449L20.0307 14.5756V5.01873C13.9652 10.9103 8.42164 17.3266 2.18206 23L0 20.8621C6.19815 15.1888 11.6947 8.86081 17.7189 3.01069H8.46583L5.45515 0H23Z"
-                                                        fill="currentColor"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1438_4428">
-                                                        <rect
-                                                            width="23"
-                                                            height="23"
-                                                            fill="white"
-                                                        ></rect>
-                                                    </clipPath>
-                                                </defs></svg
-                                            ><svg
-                                                width="35"
-                                                height="35"
-                                                viewBox="0 0 35 35"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-akkb8w e1de0imv0"
-                                                focusable="false"
-                                                aria-hidden="true"
-                                            >
-                                                <g clip-path="url(#clip0_1438_4432)">
-                                                    <path
-                                                        d="M19.4007 0H15.6093C14.5001 0 13.6027 0.897436 13.6027 2.00663V4.33593C12.6851 4.60818 11.8078 4.97119 10.9608 5.42495L9.30712 3.77125C8.5206 2.98473 7.25007 2.98473 6.46355 3.77125L3.78133 6.45347C2.99481 7.23999 2.99481 8.51052 3.78133 9.29703L5.43503 10.9507C4.98127 11.7877 4.60818 12.675 4.34601 13.5926H2.00663C0.897436 13.5926 0 14.4901 0 15.5993V19.3907C0 20.4999 0.897436 21.3973 2.00663 21.3973H4.33593C4.60818 22.3149 4.97119 23.1922 5.42495 24.0392L3.77125 25.6929C3.38807 26.0761 3.1864 26.5802 3.1864 27.1147C3.1864 27.6491 3.39816 28.1533 3.77125 28.5364L6.45347 31.2187C6.83665 31.6018 7.34082 31.8035 7.87525 31.8035C8.40968 31.8035 8.91386 31.5918 9.29703 31.2187L10.9507 29.565C11.7877 30.0187 12.675 30.3918 13.5926 30.654V32.9833C13.5926 34.0925 14.4901 34.9899 15.5993 34.9899H19.3907C20.4999 34.9899 21.3973 34.0925 21.3973 32.9833V30.654C22.3149 30.3817 23.1922 30.0187 24.0392 29.565L25.6929 31.2187C26.4794 32.0052 27.7499 32.0052 28.5364 31.2187L31.2187 28.5364C31.6018 28.1533 31.8035 27.6491 31.8035 27.1147C31.8035 26.5802 31.5918 26.0761 31.2187 25.6929L29.565 24.0392C30.0187 23.2022 30.3918 22.3149 30.654 21.3973H32.9833C34.0925 21.3973 34.9899 20.4999 34.9899 19.3907V15.5993C34.9899 14.4901 34.0925 13.5926 32.9833 13.5926H30.654C30.3817 12.675 30.0187 11.7978 29.565 10.9507L31.2187 9.29703C32.0052 8.51052 32.0052 7.23999 31.2187 6.45347L28.5364 3.77125C27.7499 2.98473 26.4794 2.98473 25.6929 3.77125L24.0392 5.42495C23.2022 4.97119 22.3149 4.5981 21.3973 4.33593V2.00663C21.4074 0.897436 20.5099 0 19.4007 0ZM23.6157 7.845C24.0694 8.13742 24.6644 8.06684 25.0475 7.68366L27.1247 5.60645L29.4036 7.88534L27.3264 9.96255C26.9432 10.3457 26.8827 10.9407 27.1651 11.3944C27.8709 12.5036 28.3751 13.7237 28.6574 15.0043C28.7784 15.5287 29.2423 15.9018 29.7767 15.9018H32.711V19.1184H29.7767C29.2423 19.1184 28.7684 19.4915 28.6574 20.0158C28.3751 21.2965 27.8709 22.5065 27.1651 23.6258C26.8727 24.0795 26.9432 24.6744 27.3264 25.0576L29.4036 27.1348L27.1247 29.4137L25.0475 27.3365C24.6644 26.9533 24.0694 26.8928 23.6157 27.1752C22.5065 27.881 21.2864 28.3852 20.0058 28.6675C19.4814 28.7885 19.1083 29.2524 19.1083 29.7868V32.7211H15.8917V29.7868C15.8917 29.2524 15.5186 28.7784 14.9942 28.6675C13.7136 28.3852 12.5036 27.881 11.3843 27.1752C10.9306 26.8827 10.3356 26.9533 9.95246 27.3365L7.87525 29.4137L5.59637 27.1348L7.67358 25.0576C8.05676 24.6744 8.11726 24.0795 7.83492 23.6258C7.12907 22.5166 6.62489 21.2965 6.34255 20.0158C6.22155 19.4915 5.75771 19.1184 5.22328 19.1184H2.28897V15.9018H5.22328C5.75771 15.9018 6.23163 15.5287 6.34255 15.0043C6.62489 13.7237 7.12907 12.5137 7.83492 11.3944C8.12734 10.9407 8.05676 10.3457 7.67358 9.96255L5.59637 7.88534L7.87525 5.60645L9.95246 7.68366C10.3356 8.06684 10.9306 8.12734 11.3843 7.845C12.4935 7.13915 13.7136 6.63498 14.9942 6.35264C15.5186 6.23163 15.8917 5.76779 15.8917 5.23336V2.29905H19.1083V5.23336C19.1083 5.76779 19.4814 6.24172 20.0058 6.35264C21.2864 6.63498 22.4964 7.13915 23.6157 7.845Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                    <path
-                                                        d="M17.0514 8.84326C12.665 9.0651 9.06522 12.675 8.84338 17.0614C8.72238 19.5117 9.63998 21.9115 11.3744 23.6358C12.9978 25.2593 15.2162 26.1769 17.5152 26.1769C17.6564 26.1769 17.7976 26.1769 17.9488 26.1668C18.5841 26.1365 19.0681 25.592 19.0378 24.9669C19.0076 24.3316 18.4631 23.8476 17.8379 23.8778C16.0027 23.9686 14.2885 23.3031 12.9978 22.0225C11.7071 20.7418 11.0517 19.0176 11.1424 17.1824C11.3038 13.9657 13.9557 11.3137 17.1724 11.1423C19.0076 11.0516 20.8529 11.7877 22.1234 13.1086C24.7552 15.8614 24.0595 19.915 21.9117 22.083C21.468 22.5367 21.468 23.2627 21.9117 23.7064C22.3654 24.1501 23.0914 24.1501 23.5351 23.7064C25.0678 22.1636 26.0056 20.0158 26.1165 17.8277C26.2375 15.4682 25.4006 13.2397 23.7771 11.5356C22.0327 9.71045 19.5824 8.73234 17.0514 8.86343V8.84326Z"
-                                                        fill="#101010"
-                                                    ></path>
-                                                </g>
-                                                <defs>
-                                                    <clipPath id="clip0_1438_4432">
-                                                        <rect
-                                                            width="35"
-                                                            height="35"
-                                                            fill="white"
-                                                        ></rect>
-                                                    </clipPath>
-                                                </defs>
-                                            </svg>
-                                        </div>
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 css-y9e1y0 e1de0imv0"
-                                        >
-                                            Learn how to build with Scroll
-                                        </p>
-                                        <p
-                                            className="MuiTypography-root MuiTypography-body1 css-18gzr4m e1de0imv0"
-                                        >
-                                            For a walkthrough, start with the User Guide's Setup
-                                            page.
-                                        </p>
-                                    </div>
-                                </div></a >
-                        </div>
-                    </div>
-                </div>
-            </div>
+         
         </>
     )
 }

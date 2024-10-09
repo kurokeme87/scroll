@@ -15,7 +15,7 @@ export default function Button({ children }) {
                 </svg>
             </span>
             <div className="css-fs25ky-mask "></div>
-            <button className="MuiButtonBase-root css-6k4tt-button e1de0imv0 tsp-bold" tabIndex="0" type="button">
+            <button className="MuiButtonBase-root css-6k4tt-button e1de0imv0 focus:border-none focus:outline-none focus:ring-0 tsp-bold" tabIndex="0" type="button">
                 {children}
             </button>
         </div>
