@@ -5,7 +5,7 @@ import { RESOURCES_DROPDOWN_DATA } from './HEADER_DATA.js'
 import { ECOSYSTEM_DROPDOWN_DATA } from './HEADER_DATA.js'
 import './mobile-header.css'
 import { useState } from 'react'
-export default function MobileNavContent({ closeNav }) {
+export default function MobileNavContent({ closeNav, backgroundColor }) {
 
     // state for develop menu
     const [isOpenDevelop, setIsOpenDevelop] = useState(false)
@@ -27,7 +27,7 @@ export default function MobileNavContent({ closeNav }) {
 
     return (
 
-        <div className='bg-primary px-5 w-full overflow-y-auto z-50 top-0 left-0'>
+        <div className={`bg-primary px-5 w-full overflow-y-auto z-50 top-0 left-0 ${backgroundColor}`}>
             {/* // first menu */}
             <div className='border-b-2 border-gray-600  '>
                 <div className='flex mobile-menu-item items-center mb-6 justify-between cursor-pointer' onClick={handleDevelopMenu}>

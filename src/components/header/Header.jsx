@@ -5,12 +5,16 @@ import { useState } from 'react'
 import { ECOSYSTEM_DROPDOWN_DATA } from './HEADER_DATA.js'
 import { RESOURCES_DROPDOWN_DATA } from './HEADER_DATA.js'
 import { DEVELOP_DROPDOWN_DATA } from './HEADER_DATA.js'
+//to track location of route
+import { useLocation } from 'react-router-dom'
 // button import
 import ConnectWalletBtn from '../button/ConnectWalletBtn.jsx'
 //mobile nav content import
 import MobileNavContent from './MobileNavContent.jsx'
 import './header.css'
 export default function Header() {
+
+
     //state for mobile navigation
     const [isOpen, setIsOpen] = useState(false);
 
@@ -21,11 +25,23 @@ export default function Header() {
     function handleMobileNavMenu() {
         setIsOpen(!isOpen)
     }
+
+
+
+    // to track location of route
+    const location = useLocation();
+    //conditional background color for join us page
+    const isLocatedInJoinUsPage = location.pathname === "/join-us";
+    //background color check
+    const backgroundColor = isLocatedInJoinUsPage ? "bg-primary-mid" : "bg-primary";
+
     return (
+
+
         <nav>
             <header
-                className="navbar MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed e1de0imv0 mui-fixed e1de0imv0 css-4hi45z e1de0imv0 hidden lg:block">
-                <div className="MuiStack-root e1de0imv0 css-nhcxco e1de0imv0">
+                className="navbar hidden lg:block">
+                <div className={`${backgroundColor}`}>
                     <div className="MuiContainer-root MuiContainer-maxWidthLg css-wiw22g e1de0imv0">
                         <div className="e1de0imv0 MuiBox-root css-1omog99 e1de0imv0">
                             <a className="flex" href="/">
@@ -79,7 +95,7 @@ export default function Header() {
                                     <div className="MuiStack-root css-1lo7re4 e1de0imv0">
                                         <div className="menu-item MuiStack-root e1de0imv0 css-74e7ue e1de0imv0">
                                             <span className='relative develop-menu tsp-light'>Develop
-                                                <div className='mega-menu shadow-md absolute'>
+                                                <div className='mega-menu shadow-md absolute z-50'>
                                                     {/* //container */}
                                                     <div className='flex'>
                                                         {/* //2 columns */}
@@ -123,7 +139,7 @@ export default function Header() {
                                         </div>
                                         <div className="menu-item MuiStack-root e1de0imv0 css-74e7ue e1de0imv0">
                                             <span className='relative ecosystem-menu'> <div className='tsp-light'>Ecosystem</div>
-                                                <div className='ecosystem-mega-menu shadow-md absolute'>
+                                                <div className='ecosystem-mega-menu shadow-md absolute z-50'>
                                                     <div>
                                                         {ECOSYSTEM_DROPDOWN_DATA.map((item, index) => (
                                                             <Link to={item.link} key={index} className='ecosystem_dropdown_item flex items-center'>
@@ -151,7 +167,7 @@ export default function Header() {
                                                 <div className='tsp-light'>
                                                     Resources
                                                 </div>
-                                                <div className='resources-mega-menu shadow-md absolute'>
+                                                <div className='resources-mega-menu shadow-md absolute z-50'>
                                                     <div>
                                                         {RESOURCES_DROPDOWN_DATA.map((item, index) => (
                                                             <Link to={item.link} key={index} className='resources_dropdown_item flex items-center'>
@@ -185,7 +201,7 @@ export default function Header() {
                 </div>
             </header>
 
-            <header className={`header-mobile p-8 left-0 right-0 bg-primary   z-50 ${isOpen ? 'fixed': ''} top-0 lg:hidden`}>
+            <header className={`header-mobile p-8 left-0 right-0 ${backgroundColor}  z-50 ${isOpen ? 'fixed' : ''} top-0 lg:hidden`}>
                 <div className='header-mobile-content flex justify-between items-center'>
                     <div className='header-mobile-logo'>
                         <a className="flex" href="/">
@@ -250,9 +266,9 @@ export default function Header() {
                 </div>
             </header>
             {/* mobile navigation content */}
-            <div className={`fixed inset-0 z-40 overflow-hidden pt-[88px] ${isOpen ? "block" : "hidden"}`}> {/* Adjust pt value to match your header height */}
-                <div className='absolute top-[80px] inset-0 overflow-y-auto bg-primary'>
-                    <MobileNavContent closeNav={closeNav} />
+            <div className={`fixed inset-0 z-40 overflow-hidden ${backgroundColor} pt-[88px] ${isOpen ? "block" : "hidden"}`}> {/* Adjust pt value to match your header height */}
+                <div className={`absolute top-[80px] inset-0 overflow-y-auto ${backgroundColor}`}>
+                    <MobileNavContent closeNav={closeNav} backgroundColor={backgroundColor}/>
                 </div>
             </div>
         </nav>
