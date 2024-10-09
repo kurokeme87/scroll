@@ -6,10 +6,10 @@ const Sessions = () => {
 
     return (
         <div>
-            <div className="md:min-h-[80vh] lg:min-h-screen min-h-[60vh] scroll-sessions-section">
+            <div className="md:min-h-[80vh] lg:min-h-screen min-h-[300px] scroll-sessions-section text-center">
 
                 <p
-                    className="MuiTypography-root MuiTypography-body1 css-1kp2mto e1de0imv0 text-5xl md:text-6xl lg:text-8xl tsp-bold"
+                    className="text-black text-6xl lg:text-8xl tsp-bold pt-[10vh]"
                 >
                     Scroll Sessions
                 </p>
