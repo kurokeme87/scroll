@@ -1,5 +1,14 @@
 import React from 'react'
 import './css/community.css'
+import pic1 from '../assets/pic-1.png'
+import pic2 from '../assets/pic-2.png'
+import pic3 from '../assets/pic-3.png'
+import pic4 from '../assets/pic-4.png'
+import pic5 from '../assets/pic-5.png'
+import pic6 from '../assets/pic-6.png'
+import pic7 from '../assets/pic-7.png'
+
+
 export default function Community() {
     return (
         <div>
@@ -49,7 +58,7 @@ export default function Community() {
                                         fill="currentColor"></path>
                                 </svg>
                             </div>
-                            <div className="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary e1de0imv0 css-1xcq6l7-root e1de0imv0">
+                            <div className="MuiInputBase-root MuiInput-root MuiInputBase-colorPrimary e1de0imv0 css-1xcq6l7-root e1de0imv0 !min-w-0 ">
                                 <div tabindex="0" role="button" aria-expanded="false" aria-haspopup="listbox"
                                     className="MuiSelect-select MuiSelect-standard MuiInputBase-input MuiInput-input e1de0imv0 css-1q12ur3-select e1de0imv0">
                                     <div className="MuiStack-root css-1iwoqsn e1de0imv0">
@@ -90,7 +99,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="Asia">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/0e38628875e76139327136778b7e7b96"
+                                        <img alt="Event cover" src={pic1}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -136,7 +145,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="South America">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/ef919a428bb4bd92050eaa04e81cf843"
+                                        <img alt="Event cover" src={pic2}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -181,7 +190,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="Europe">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/3669780a362243895920c8af75ea552e"
+                                        <img alt="Event cover" src={pic3}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -225,8 +234,8 @@ export default function Community() {
                                     rel="noopener noreferrer" target="_blank" href="https://lu.ma/dtwr61ox">
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
-                                        region="Europe">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/18c57d3f61a1393da4b47b383d596b0c"
+                                            region="Europe">
+                                            <img alt="Event cover" src={pic4}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -271,7 +280,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="Middle East">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/4b2f2b2585d4ff33d74932ef1ff3e13f"
+                                        <img alt="Event cover" src={pic5}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -407,7 +416,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="Central America">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/cad2ac6c3799b6442e1755b1c592a14d"
+                                        <img alt="Event cover" src={pic6}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
@@ -452,7 +461,7 @@ export default function Community() {
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
                                         region="Pacific">
-                                        <img alt="Event cover" src="https://community.scroll.cat/i/3dddb01ded65e9de5c6c6054395f4397"
+                                        <img alt="Event cover" src={pic7}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">
