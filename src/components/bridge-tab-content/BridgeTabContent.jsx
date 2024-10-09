@@ -295,7 +295,7 @@ function InnerWithdrawTabContent() {
             </div>
             {/* input section */}
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-8">
                 <div className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0 ">
                     <input aria-invalid="false" disabled="" placeholder="0.0000" type="text" className="MuiInputBase-input Mui-disabled css-5v49rv-input e1de0imv0" value="" />
                 </div>
