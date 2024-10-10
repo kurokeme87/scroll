@@ -1,11 +1,17 @@
 import React from 'react'
 import './css/sessions.css'
 import ConnectWalletBtn from '../components/button/ConnectWalletBtn'
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
 
-const Sessions = () => {
+const Sessions = ({ title }) => {
 
     return (
         <div>
+            {/* title tag changing depending on route */}
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className="md:min-h-[80vh] lg:min-h-screen min-h-[300px] scroll-sessions-section text-center">
 
                 <p

@@ -1,4 +1,6 @@
+//css import
 import './App.css'
+//pages
 import Footer from './components/footer/Footer.jsx'
 import Bridge from './pages/Bridge.jsx'
 import Portal from './pages/Portal.jsx'
@@ -20,14 +22,14 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Bridge />} />
-          <Route path='/portal' element={<Portal />} />
-          <Route path='/canvas-and-badges' element={<CanvasAndBadges />} />
-          <Route path='/ecosystem' element={<Ecosystem />} />
-          <Route path='/sessions' element={<Sessions />} />
-          <Route path='/community' element={<Community />} />
-          <Route path='/blog' element={<Blog />} />
-          <Route path='/join-us' element={<JoinUs />} />
+          <Route path='/' element={<Bridge title="Scroll-Bridge" />} />
+          <Route path='/portal' element={<Portal title="Scroll-Portal" />} />
+          <Route path='/canvas-and-badges' element={<CanvasAndBadges title="Scroll-Canvas and Badges" />} />
+          <Route path='/ecosystem' element={<Ecosystem title="Scroll-Ecosystem" />} />
+          <Route path='/sessions' element={<Sessions title="Scroll-Sessions" />} />
+          <Route path='/community' element={<Community title="Scroll-Community" />} />
+          <Route path='/blog' element={<Blog title="Scroll-Blog" />} />
+          <Route path='/join-us' element={<JoinUs title="Scroll-Join Us" />} />
         </Routes>
         <Footer />
       </Router>

@@ -7,11 +7,16 @@ import pic4 from '../assets/pic-4.png'
 import pic5 from '../assets/pic-5.png'
 import pic6 from '../assets/pic-6.png'
 import pic7 from '../assets/pic-7.png'
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
 
-
-export default function Community() {
+export default function Community({ title }) {
     return (
         <div>
+            {/* title tag changing depending on route */}
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className="MuiBox-root css-7e8o1j-container e1de0imv0" id="community-container">
 
 
@@ -234,8 +239,8 @@ export default function Community() {
                                     rel="noopener noreferrer" target="_blank" href="https://lu.ma/dtwr61ox">
                                     <div
                                         className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiCard-root e1de0imv0 css-odyyue-card e1de0imv0"
-                                            region="Europe">
-                                            <img alt="Event cover" src={pic4}
+                                        region="Europe">
+                                        <img alt="Event cover" src={pic4}
                                             className="css-tg5y7g-cover" />
                                         <div className="MuiStack-root css-p27s4m e1de0imv0">
                                             <p className="MuiTypography-root MuiTypography-body1 css-13a99cs e1de0imv0">

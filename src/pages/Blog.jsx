@@ -1,8 +1,15 @@
 import React from 'react'
 import './css/blog.css'
-export default function Blog() {
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
+
+export default function Blog({ title }) {
     return (
         <div>
+            {/* title tag changing depending on route */}
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className="e1de0imv0 MuiBox-root css-4hj5r5 e1de0imv0">
                 <div className="MuiBox-root css-14i99rr e1de0imv0">
                     <div
@@ -966,9 +973,9 @@ export default function Blog() {
                                             /></picture>
                                     </div>
                                 </div>
-                               
-                            
-                              
+
+
+
                             </ul>
                         </div>
                     </div>

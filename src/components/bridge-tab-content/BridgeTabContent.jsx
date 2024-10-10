@@ -84,7 +84,7 @@ function DepositTabContent() {
                         </span>
                     </div>
                 </div>
-                <div className="MuiStack-root flex e1de0imv0 w-full gap-4">
+                <div className="MuiStack-root flex e1de0imv0 w-full gap-4 mt-8">
                     <div
                         className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0">
                         <input aria-invalid="false" disabled="" placeholder="0.0000" type="text"

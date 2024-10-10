@@ -1,9 +1,15 @@
 import React from 'react';
 import './css/canvas_and-badges.css'
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
 
-export default function CanvasAndBadges() {
+export default function CanvasAndBadges({title}) {
     return (
         <div>
+              {/* title tag changing depending on route */}
+              <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className="MuiBox-root css-1b2hkly e1de0imv0">
                 <div className="MuiContainer-root MuiContainer-maxWidthLg css-aoibbe e1de0imv0">
                     <div className="MuiBox-root css-0 e1de0imv0" style={{ opacity: 0.2 }}>

@@ -11,9 +11,16 @@ import news2 from '../assets/news-cover-2.png'
 import news3 from '../assets/news-cover-3.png'
 import joinUsImg from '../assets/join-us.png'
 import './css/join-us.css'
-export default function JoinUs() {
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
+
+export default function JoinUs({ title }) {
   return (
     <div>
+      {/* title tag changing depending on route */}
+      <Helmet>
+        <title> {title} </title>
+      </Helmet>
       <div className="MuiBox-root css-7e8o1j-container e1de0imv0">
         <div className="MuiBox-root css-17kxzm1-container e1de0imv0">
           <div className="MuiBox-root css-14i99rr e1de0imv0">
@@ -243,20 +250,20 @@ export default function JoinUs() {
             </div>
           </div>
 
-         
+
         </div>
 
-         {/* join scroll and contribute */}
-         <div className="e1de0imv0 MuiBox-root css-1csixvy e1de0imv0">
-            <img alt="background" src={joinUsImg} style={{ width: '100%' }} />
-            <div className="css-14vqfyn" style={{ animationDelay: '0ms' }}>
-              <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1dfqo3s e1de0imv0">
-                Join Scroll and contribute in <br /> building the best L2 product in the web3 world.
-              </p>
-            </div>
-          <Button>View Open Positions</Button>
+        {/* join scroll and contribute */}
+        <div className="e1de0imv0 MuiBox-root css-1csixvy e1de0imv0">
+          <img alt="background" src={joinUsImg} style={{ width: '100%' }} />
+          <div className="css-14vqfyn" style={{ animationDelay: '0ms' }}>
+            <p className="MuiTypography-root MuiTypography-body1 e1de0imv0 css-1dfqo3s e1de0imv0">
+              Join Scroll and contribute in <br /> building the best L2 product in the web3 world.
+            </p>
           </div>
-          {/* join scroll and contribute */}
+          <Button>View Open Positions</Button>
+        </div>
+        {/* join scroll and contribute */}
 
       </div>
 

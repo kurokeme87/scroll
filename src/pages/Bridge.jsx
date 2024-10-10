@@ -2,10 +2,12 @@ import React from 'react'
 import './css/bridge.css'
 import { useState } from 'react'
 import Modal from '../components/modal/Modal.jsx'
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
 import { DepositTabContent, WithdrawTabContent, ClaimTabContent, InnerWithdrawTabContent } from '../components/bridge-tab-content/BridgeTabContent.jsx'
 
 
-export default function Bridge() {
+export default function Bridge({ title }) {
 
     // state for main tabs
     const [tabOpen, setTapOpen] = useState('depositScroll');
@@ -19,9 +21,12 @@ export default function Bridge() {
     const handleModalOpen = () => {
         setModalOpen(!modalOpen);
     }
-    
+
     return (
         <div>
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <Modal open={modalOpen} setOpen={setModalOpen} />
             <div className="MuiBox-root css-14i99rr e1de0imv0">
                 <div className="MuiContainer-root MuiContainer-maxWidthLg css-ef23km e1de0imv0">
@@ -82,7 +87,7 @@ export default function Bridge() {
                             </div>
                         </div>
 
-                        <div className='px-10 bg-primary-fair'>
+                        <div className=' bg-primary-fair'>
                             {/* content for deposit to scroll tab*/}
                             <div className={`${tabOpen === 'depositScroll' ? 'block' : 'hidden'}`}>
                                 <DepositTabContent />
@@ -91,7 +96,7 @@ export default function Bridge() {
 
 
                             {/* content for withdraw to ethereum tab*/}
-                            <div className={`${tabOpen === 'withdrawEthereum' ? 'block' : 'hidden'}`}>
+                            <div className={`${tabOpen === 'withdrawEthereum' ? 'block' : 'hidden'} px-12`}>
 
                                 {/* inner tabs buttons*/}
                                 <div className="inner-tabs flex justify-between border-b border-black">

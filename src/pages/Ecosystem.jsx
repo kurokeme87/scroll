@@ -4,6 +4,9 @@ import "./css/ecosystem.css"
 // slider import form react slick
 import Slider from 'react-slick';
 
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
+
 //imports for react spring animations
 import { useSpring, animated } from 'react-spring'
 
@@ -24,7 +27,7 @@ function Number({ n }) {
 
 
 
-export default function Ecosystem() {
+export default function Ecosystem({ title }) {
     //custom CSS edits have been made to the slider
     //to find the custom css go to "index.css"
     //slider settings
@@ -68,6 +71,10 @@ export default function Ecosystem() {
 
     return (
         <>
+            {/* title tag changing depending on route */}
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className="MuiBox-root css-14i99rr e1de0imv0">
                 <div
                     className="MuiContainer-root MuiContainer-maxWidthLg css-1ckcl6e e1de0imv0"
@@ -140,7 +147,7 @@ export default function Ecosystem() {
                         >
                             Ecosystem highlights
                         </p>
-                      <Button>Read More</Button>
+                        <Button>Read More</Button>
                     </div>
                     <div className="swiper swiper-initialized swiper-horizontal css-hfpyip e1de0imv0 swiper-backface-hidden" >
                         <div className='slider-carousel'>
@@ -2499,11 +2506,11 @@ export default function Ecosystem() {
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>
-         
+
         </>
     )
 }

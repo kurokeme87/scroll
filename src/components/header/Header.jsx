@@ -109,12 +109,14 @@ export default function Header() {
                                                                     className={`mega-menu-item text-black ${index !== 0 && 'mt-5'}`}
                                                                 >
                                                                     <div dangerouslySetInnerHTML={{ __html: item.svg }} />
-                                                                    <div>
+                                                                    <div className='relative'>
                                                                         <p>{item.title}</p>
                                                                         <p>{item.description}</p>
+                                                                        <div className='arrow absolute right-[-10px] top-0 bottom-0 -rotate-[45deg]'><span className='inline-block'>&#8594;</span></div>
                                                                     </div>
                                                                 </Link>
-                                                            ))}                                                        </div>
+                                                            ))}
+                                                        </div>
 
                                                         <div className='second-column'>
                                                             <div>
@@ -268,7 +270,7 @@ export default function Header() {
             {/* mobile navigation content */}
             <div className={`fixed inset-0 z-40 overflow-hidden ${backgroundColor} pt-[88px] ${isOpen ? "block" : "hidden"}`}> {/* Adjust pt value to match your header height */}
                 <div className={`absolute top-[80px] inset-0 overflow-y-auto ${backgroundColor}`}>
-                    <MobileNavContent closeNav={closeNav} backgroundColor={backgroundColor}/>
+                    <MobileNavContent closeNav={closeNav} backgroundColor={backgroundColor} />
                 </div>
             </div>
         </nav>

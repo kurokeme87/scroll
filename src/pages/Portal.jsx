@@ -1,8 +1,14 @@
 import React from 'react'
 import './css/portal.css'
-export default function Portal() {
+// this is a react package for dynamically changing the title of a page
+import { Helmet } from 'react-helmet'
+export default function Portal({ title }) {
     return (
         <div className='bg-primary'><div className="MuiContainer-root MuiContainer-maxWidthLg css-wiw22g e1de0imv0">
+            {/* title tag changing depending on route */}
+            <Helmet>
+                <title> {title} </title>
+            </Helmet>
             <div className=" css-1irjm5o ">
                 <p className="MuiTypography-root MuiTypography-body1 css-1uqsrsj e1de0imv0 text-8xl tsp-bold">
                     Scroll
