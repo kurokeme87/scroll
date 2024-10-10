@@ -7,6 +7,7 @@ import pic4 from '../assets/pic-4.png'
 import pic5 from '../assets/pic-5.png'
 import pic6 from '../assets/pic-6.png'
 import pic7 from '../assets/pic-7.png'
+import wizardImg from '../assets/wizard.svg'
 // this is a react package for dynamically changing the title of a page
 import { Helmet } from 'react-helmet'
 
@@ -546,11 +547,11 @@ export default function Community({ title }) {
                                 <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
                                     rel="noopener noreferrer" target="_blank"></a>
                                 <div className="MuiStack-root css-89gbqn e1de0imv0">
-                                    <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                                        rel="noopener noreferrer" target="_blank"></a>
+
                                     <div className="MuiBox-root css-0 e1de0imv0">
                                         <a className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone e1de0imv0 e1de0imv0 css-1cwcwi7 e1de0imv0"
-                                            rel="noopener noreferrer" target="_blank"><svg width="158" height="28" viewBox="0 0 158 28"
+                                            rel="noopener noreferrer" target="_blank">
+                                            <svg width="158" height="28" viewBox="0 0 158 28"
                                                 fill="none" xmlns="http://www.w3.org/2000/svg"
                                                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-yj8uoj e1de0imv0" focusable="false"
                                                 aria-hidden="true">
@@ -618,7 +619,8 @@ export default function Community({ title }) {
                                         </a><a
                                             className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium e1de0imv0 css-1kvt6zv-action-action e1de0imv0"
                                             tabindex="0" href="https://levelupweb3.xyz/" target="_blank">Visit Level Up Site<span
-                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0"><svg width="14"
+                                                className="MuiButton-endIcon MuiButton-iconSizeMedium css-pt151d e1de0imv0">
+                                                <svg width="14"
                                                     height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"
                                                     className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-13vatta e1de0imv0" focusable="false"
                                                     aria-hidden="true">
@@ -630,19 +632,7 @@ export default function Community({ title }) {
                                                 </svg></span></a>
                                     </div>
                                     <div className="MuiBox-root css-f64szn e1de0imv0">
-                                        <svg width="405" height="240" viewBox="0 0 405 240" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v4zfp0 e1de0imv0" focusable="false"
-                                            aria-hidden="true">
-                                            <rect x="0.085083" width="404.556" height="240" fill="url(#pattern0_5278_1946)"></rect>
-                                            <defs>
-                                                <pattern id="pattern0_5278_1946" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                    <use xlink:href="#image0_5278_1946" transform="scale(0.000787191 0.00129032)"></use>
-                                                </pattern>
-                                                <image id="image0_5278_1946" width="4096" height="775"
-                                                    xlink:href="https://levelupweb3.xyz/static/media/levelup-bg.3922228b.png"></image>
-                                            </defs>
-                                        </svg>
+                                        <img className='md:block hidden' src={wizardImg} alt="" />
                                     </div>
                                 </div>
                             </div>
