@@ -12,6 +12,10 @@ import ConnectWalletBtn from '../button/ConnectWalletBtn.jsx'
 //mobile nav content import
 import MobileNavContent from './MobileNavContent.jsx'
 import './header.css'
+//
+import arrowUp from '../../assets/arrow-upward.svg'
+
+
 export default function Header() {
 
 
@@ -106,13 +110,15 @@ export default function Header() {
                                                                 <Link
                                                                     key={index}
                                                                     to={item.link}
-                                                                    className={`mega-menu-item text-black ${index !== 0 && 'mt-5'}`}
+                                                                    className={`relative mega-menu-item text-black ${index !== 0 && 'mt-5'}`}
                                                                 >
                                                                     <div dangerouslySetInnerHTML={{ __html: item.svg }} />
                                                                     <div className='relative'>
                                                                         <p>{item.title}</p>
                                                                         <p>{item.description}</p>
-                                                                        <div className='arrow absolute right-[-10px] top-0 bottom-0 -rotate-[45deg]'><span className='inline-block'>&#8594;</span></div>
+                                                                        <div className='arrow absolute'>
+                                                                            <img className='h-5' src={arrowUp} alt=""/>
+                                                                        </div>
                                                                     </div>
                                                                 </Link>
                                                             ))}

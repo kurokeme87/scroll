@@ -16,8 +16,19 @@
 }
 
 .mega-menu .arrow {
-    
+    transition: all 250ms ease-in-out;
+    right: -2%;
+    top: 25%;
+    opacity: 0;
 }
+
+
+
+.mega-menu-item:hover .arrow {
+    right: -8%;
+    opacity: 1;
+}
+
 
 .menu-item:hover>svg {
     transform: rotate(180deg);
@@ -36,6 +47,7 @@
     color: #FF684B;
     transition: color 0.3s ease;
 }
+
 
 .mega-menu-item>* {
     transition: color 0.3s ease;
