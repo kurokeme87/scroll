@@ -134,7 +134,7 @@ export default function MobileNavContent({ closeNav, backgroundColor }) {
                 </div>
             </div>
             {/* // fourth menu */}
-            <Link onClick={closeNav} to='/bridge' className='text-3xl tsp-bold text-red block mt-8 pb-8'>Bridge</Link>
+            <Link onClick={closeNav} to='/' className='text-3xl tsp-bold text-red block mt-8 pb-8'>Bridge</Link>
         </div>
     )
 }

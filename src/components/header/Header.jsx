@@ -194,7 +194,7 @@ export default function Header() {
                                                     fill="currentColor"></path>
                                             </svg>
                                         </div>
-                                        <a aria-current="page" className="active css-1sykfo2 e1de0imv0 active" href="/">Bridge</a>
+                                        <a aria-current="page" className="active css-1sykfo2 e1de0imv0 active" href="#">Bridge</a>
                                     </div>
                                 </div>
                                 <div className="MuiStack-root css-12g7bu5 e1de0imv0">
