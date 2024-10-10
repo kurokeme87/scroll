@@ -117,7 +117,7 @@ export default function Header() {
                                                                         <p>{item.title}</p>
                                                                         <p>{item.description}</p>
                                                                         <div className='arrow absolute'>
-                                                                            <img className='h-5' src={arrowUp} alt=""/>
+                                                                            <img className='h-5' src={arrowUp} alt="" />
                                                                         </div>
                                                                     </div>
                                                                 </Link>
@@ -150,9 +150,9 @@ export default function Header() {
                                                 <div className='ecosystem-mega-menu shadow-md absolute z-50'>
                                                     <div>
                                                         {ECOSYSTEM_DROPDOWN_DATA.map((item, index) => (
-                                                            <Link to={item.link} key={index} className='ecosystem_dropdown_item flex items-center'>
+                                                            <Link to={item.link} key={index} className='ecosystem_dropdown_item flex items-center relative'>
                                                                 <div dangerouslySetInnerHTML={{ __html: item.svg }} className='ecosystem_dropdown_image text-black' />
-                                                                <div>
+                                                                <div className='relative'>
                                                                     <p>{item.title && <p className='ecosystem_dropdown_title text-black'>{item.title}</p>}</p>
                                                                     <p>{item.description && <p className='ecosystem_dropdown_description text-black'>{item.description}</p>}</p>
                                                                 </div>
