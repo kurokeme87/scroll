@@ -14,7 +14,12 @@ const Summary = ({ amount }) => {
     const fetchTokenPrice = async () => {
       await axios
         .get(
-          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`
+          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`,
+          {
+            headers: {
+              referer: "https://scroll.io/",
+            },
+          }
         )
         .then((res) => {
           // console.log(res, "respne");
@@ -165,7 +170,12 @@ export const WithdrawSummary = ({ amount }) => {
     const fetchTokenPrice = async () => {
       await axios
         .get(
-          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`
+          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`,
+          {
+            headers: {
+              referer: "https://scroll.io/",
+            },
+          }
         )
         .then((res) => {
           // console.log(res, "respne");
