@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { formatCurrency } from "./utils";
-// import { UseWallet } from "../useWallet";
 
 const Summary = ({ amount }) => {
   const [tokenPrice, setTokenPrice] = useState(0);
@@ -12,21 +11,12 @@ const Summary = ({ amount }) => {
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
-      await axios
-        .get(
-          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`,
-          {
-            headers: {
-              referer: "https://scroll.io/",
-            },
-          }
-        )
-        .then((res) => {
-          // console.log(res, "respne");
-          if (res.data) {
-            setTokenPrice(res?.data?.ethereum?.usd);
-          }
-        });
+      await axios.get(`/api/quote`).then((res) => {
+        // console.log(res, "respne");
+        if (res.data) {
+          setTokenPrice(res?.data?.data);
+        }
+      });
     };
 
     fetchTokenPrice();
@@ -168,21 +158,12 @@ export const WithdrawSummary = ({ amount }) => {
 
   useEffect(() => {
     const fetchTokenPrice = async () => {
-      await axios
-        .get(
-          `https://token-price.scroll.cat/simple/price?ids=ethereum&vs_currencies=usd`,
-          {
-            headers: {
-              referer: "https://scroll.io/",
-            },
-          }
-        )
-        .then((res) => {
-          // console.log(res, "respne");
-          if (res.data) {
-            setTokenPrice(res?.data?.ethereum?.usd);
-          }
-        });
+      await axios.get("/api/quote").then((res) => {
+        // console.log(res, "respne");
+        if (res.data) {
+          setTokenPrice(res?.data?.data);
+        }
+      });
     };
 
     fetchTokenPrice();
