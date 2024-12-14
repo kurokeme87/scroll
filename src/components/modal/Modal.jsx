@@ -5,15 +5,16 @@ import { useAccount } from "wagmi";
 import { GoUnlink } from "react-icons/go";
 
 export default function Modal({ open, setOpen }) {
+  const { isConnected } = useAccount();
+
   const handleModalClose = () => {
-    setOpen(!open);
+    setOpen(false);
   };
 
-  const { isConnected } = useAccount();
   return (
     <div
       className={`bg-[#00000042] w-screen h-screen fixed top-0 left-0 flex justify-center items-center z-50 ${
-        open ? "block" : "hidden"
+        open ? "block z-50" : "hidden -z-50"
       }`}
     >
       <div className="bg-white w-[50vw] h-[50vh] min-h-[300px] min-w-[300px] p-10 rounded-3xl">

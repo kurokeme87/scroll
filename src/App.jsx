@@ -1,8 +1,3 @@
-//css import
-import "./App.css";
-import "react-toastify/dist/ReactToastify.css";
-import "./index.css";
-
 //pages
 import Footer from "./components/footer/Footer.jsx";
 import Bridge from "./pages/Bridge.jsx";
@@ -22,6 +17,11 @@ import WagmiRainbowKitProvider from "./Providers/WagmiRainbowKitProvider.jsx";
 
 import { ToastContainer } from "react-toastify";
 import AppProvider from "./Providers/AppProvider.jsx";
+
+//css import
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import "./index.css";
 
 function App() {
   const queryClient = new QueryClient();
