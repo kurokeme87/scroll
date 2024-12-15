@@ -68,9 +68,7 @@ function DepositTabContent() {
 
   const handleMax = () => {
     if (data?.formatted > 0) {
-      setAmount(Number(data?.formatted).toFixed(5));
-
-      console.log(Number(data?.formatted).toFixed(5));
+      setAmount(data?.formatted);
     }
   };
 
@@ -192,12 +190,13 @@ function DepositTabContent() {
         <div className="MuiStack-root flex e1de0imv0 w-full gap-4 mt-8">
           <div className="MuiInputBase-root MuiInputBase-colorPrimary css-13ttspr-inputWrapper e1de0imv0">
             <input
+              disabled={!isConnected}
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               aria-invalid="false"
               placeholder="0.0000"
               type="text"
-              className="MuiInputBase-input css-5v49rv-input e1de0imv0"
+              className="MuiInputBase-input css-5v49rv-input e1de0imv0 disabled:opacity-30 disabled:cursor-not-allowed"
             />
           </div>
 
@@ -252,54 +251,59 @@ function DepositTabContent() {
           />
         ) : null}
 
-        {isConnected ? null : (
-          <div className="MuiBox-root css-chaoz9 e1de0imv0">
-            <p className="MuiTypography-root MuiTypography-body1 css-1ot4ywj e1de0imv0">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1aed6ux e1de0imv0"
-                focusable="false"
-                aria-hidden="true"
-              >
-                <path
-                  d="M14.846 11.0921C14.7322 10.812 14.4172 10.6764 14.1372 10.7858C13.8572 10.8952 13.7215 11.2146 13.8309 11.4946C13.9753 11.8534 13.9272 12.2603 13.704 12.5841C13.4852 12.9078 13.1308 13.096 12.7327 13.096H3.27308C2.83992 13.096 2.45926 12.8728 2.24924 12.4922C2.03922 12.1159 2.04797 11.6696 2.27549 11.3021L7.00529 3.64952C7.21968 3.29949 7.59159 3.09385 8.00288 3.09385C8.41417 3.09385 8.78607 3.30387 9.00047 3.64952L12.5008 9.31565C12.6583 9.5738 12.9952 9.65256 13.2533 9.49504C13.5115 9.33753 13.5903 9.00062 13.4327 8.74248L9.93243 3.07635C9.51676 2.40254 8.79482 2 8.00288 2C7.21093 2 6.48899 2.40254 6.07333 3.07635L1.34354 10.7333C0.905996 11.4421 0.884119 12.304 1.29103 13.0304C1.69794 13.7567 2.43738 14.1942 3.26871 14.1942H12.7283C13.494 14.1942 14.1766 13.8311 14.6053 13.201C15.0298 12.5753 15.1173 11.7877 14.8416 11.0921H14.846Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M8.00288 9.47567C7.67941 9.47567 7.41689 9.21314 7.41689 8.88968L7.41689 6.59414C7.41689 6.27067 7.67941 6.00815 8.00288 6.00815C8.32635 6.00815 8.58887 6.27067 8.58887 6.59414L8.58887 8.88968C8.58887 9.21314 8.32635 9.47567 8.00288 9.47567Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  d="M8.00288 10.2351C7.67925 10.2351 7.41689 10.4974 7.41689 10.8211C7.41689 11.1447 7.67925 11.4071 8.00288 11.4071C8.32651 11.4071 8.58887 11.1447 8.58887 10.8211C8.58887 10.4974 8.32651 10.2351 8.00288 10.2351Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-              <span
-                className="MuiStack-root css-1xhj18k e1de0imv0"
-                style={{
-                  display: "inline-flex",
-                  verticalAlign: "middle",
-                  alignItems: "center",
-                  gap: "0.2rem",
-                }}
-              >
-                <button
-                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button e1de0imv0 e1de0imv0 css-9zpnh7 e1de0imv0"
-                  rel="noopener noreferrer"
-                  target=""
-                >
-                  Connect wallet
-                </button>
-              </span>
-            </p>
-          </div>
-        )}
+        <div className="flex justify-start items-center w-full">
+          <ScrollButton
+            connect={
+              <div className="MuiBox-root css-chaoz9 e1de0imv0">
+                <p className="MuiTypography-root MuiTypography-body1 css-1ot4ywj e1de0imv0">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1aed6ux e1de0imv0"
+                    focusable="false"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M14.846 11.0921C14.7322 10.812 14.4172 10.6764 14.1372 10.7858C13.8572 10.8952 13.7215 11.2146 13.8309 11.4946C13.9753 11.8534 13.9272 12.2603 13.704 12.5841C13.4852 12.9078 13.1308 13.096 12.7327 13.096H3.27308C2.83992 13.096 2.45926 12.8728 2.24924 12.4922C2.03922 12.1159 2.04797 11.6696 2.27549 11.3021L7.00529 3.64952C7.21968 3.29949 7.59159 3.09385 8.00288 3.09385C8.41417 3.09385 8.78607 3.30387 9.00047 3.64952L12.5008 9.31565C12.6583 9.5738 12.9952 9.65256 13.2533 9.49504C13.5115 9.33753 13.5903 9.00062 13.4327 8.74248L9.93243 3.07635C9.51676 2.40254 8.79482 2 8.00288 2C7.21093 2 6.48899 2.40254 6.07333 3.07635L1.34354 10.7333C0.905996 11.4421 0.884119 12.304 1.29103 13.0304C1.69794 13.7567 2.43738 14.1942 3.26871 14.1942H12.7283C13.494 14.1942 14.1766 13.8311 14.6053 13.201C15.0298 12.5753 15.1173 11.7877 14.8416 11.0921H14.846Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M8.00288 9.47567C7.67941 9.47567 7.41689 9.21314 7.41689 8.88968L7.41689 6.59414C7.41689 6.27067 7.67941 6.00815 8.00288 6.00815C8.32635 6.00815 8.58887 6.27067 8.58887 6.59414L8.58887 8.88968C8.58887 9.21314 8.32635 9.47567 8.00288 9.47567Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M8.00288 10.2351C7.67925 10.2351 7.41689 10.4974 7.41689 10.8211C7.41689 11.1447 7.67925 11.4071 8.00288 11.4071C8.32651 11.4071 8.58887 11.1447 8.58887 10.8211C8.58887 10.4974 8.32651 10.2351 8.00288 10.2351Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                  <span
+                    className="MuiStack-root css-1xhj18k e1de0imv0"
+                    style={{
+                      display: "inline-flex",
+                      verticalAlign: "middle",
+                      alignItems: "center",
+                      gap: "0.2rem",
+                    }}
+                  >
+                    <button
+                      className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button e1de0imv0 e1de0imv0 css-9zpnh7 e1de0imv0"
+                      rel="noopener noreferrer"
+                      target=""
+                    >
+                      Connect wallet
+                    </button>
+                  </span>
+                </p>
+              </div>
+            }
+          />
+        </div>
+
         <div className="MuiBox-root  css-8atqhb e1de0imv0">
           {isPlanSelected ? null : (
             <div className=" MuiStack-root css-1rvccqv e1de0imv0 sm:flex-row sm:flex flex-col">
@@ -498,9 +502,7 @@ function DepositTabContent() {
   );
 }
 
-function InnerWithdrawTabContent() {
-  // const [selectedPlan, setSelectedPlan] = useState("economy");
-  // const [isPlanSelected, setIsPlanSelected] = useState(false);
+function InnerWithdrawTabContent({ open }) {
   const { isConnected, chainId, address, connector } = useAccount();
   const { selectedToken, setIsSelectTokenModal } = useScrollApp();
   const [amount, setAmount] = useState(0);
@@ -535,7 +537,7 @@ function InnerWithdrawTabContent() {
     ...(selectedToken?.address && { token: selectedToken?.address }),
     chainId,
     config,
-    enabled: !!(address && chainId),
+    enabled: !!(address && chainId && open),
   });
 
   // Trigger refetch when the component re-renders due to network switch
@@ -545,9 +547,7 @@ function InnerWithdrawTabContent() {
 
   const handleMax = () => {
     if (data?.formatted > 0) {
-      setAmount(Number(data?.formatted).toFixed(5));
-
-      // console.log(Number(data?.formatted).toFixed(5));
+      setAmount(data?.formatted);
     }
   };
 
@@ -666,11 +666,12 @@ function InnerWithdrawTabContent() {
         <div className="MuiInputBase-root MuiInputBase-colorPrimary Mui-disabled css-13ttspr-inputWrapper e1de0imv0 ">
           <input
             value={amount}
+            disabled={!isConnected}
             onChange={(e) => setAmount(e.target.value)}
             aria-invalid="false"
             placeholder="0.0000"
             type="text"
-            className="MuiInputBase-input css-5v49rv-input e1de0imv0 text-black"
+            className="MuiInputBase-input css-5v49rv-input e1de0imv0 text-black disabled:opacity-35 disabled:cursor-not-allowed"
           />
         </div>
         <button
@@ -725,55 +726,61 @@ function InnerWithdrawTabContent() {
         />
       ) : null}
 
-      {isConnected ? null : (
-        <p className="MuiTypography-root MuiTypography-body1 css-1ot4ywj e1de0imv0">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1aed6ux e1de0imv0"
-            focusable="false"
-            aria-hidden="true"
-          >
-            <path
-              d="M14.846 11.0921C14.7322 10.812 14.4172 10.6764 14.1372 10.7858C13.8572 10.8952 13.7215 11.2146 13.8309 11.4946C13.9753 11.8534 13.9272 12.2603 13.704 12.5841C13.4852 12.9078 13.1308 13.096 12.7327 13.096H3.27308C2.83992 13.096 2.45926 12.8728 2.24924 12.4922C2.03922 12.1159 2.04797 11.6696 2.27549 11.3021L7.00529 3.64952C7.21968 3.29949 7.59159 3.09385 8.00288 3.09385C8.41417 3.09385 8.78607 3.30387 9.00047 3.64952L12.5008 9.31565C12.6583 9.5738 12.9952 9.65256 13.2533 9.49504C13.5115 9.33753 13.5903 9.00062 13.4327 8.74248L9.93243 3.07635C9.51676 2.40254 8.79482 2 8.00288 2C7.21093 2 6.48899 2.40254 6.07333 3.07635L1.34354 10.7333C0.905996 11.4421 0.884119 12.304 1.29103 13.0304C1.69794 13.7567 2.43738 14.1942 3.26871 14.1942H12.7283C13.494 14.1942 14.1766 13.8311 14.6053 13.201C15.0298 12.5753 15.1173 11.7877 14.8416 11.0921H14.846Z"
-              fill="currentColor"
-            ></path>
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M8.00288 9.47567C7.67941 9.47567 7.41689 9.21314 7.41689 8.88968L7.41689 6.59414C7.41689 6.27067 7.67941 6.00815 8.00288 6.00815C8.32635 6.00815 8.58887 6.27067 8.58887 6.59414L8.58887 8.88968C8.58887 9.21314 8.32635 9.47567 8.00288 9.47567Z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M8.00288 10.2351C7.67925 10.2351 7.41689 10.4974 7.41689 10.8211C7.41689 11.1447 7.67925 11.4071 8.00288 11.4071C8.32651 11.4071 8.58887 11.1447 8.58887 10.8211C8.58887 10.4974 8.32651 10.2351 8.00288 10.2351Z"
-              fill="currentColor"
-            ></path>
-          </svg>
-          <span
-            className="MuiStack-root css-1xhj18k e1de0imv0"
-            style={{
-              display: "inline-flex",
-              verticalAlign: "middle",
-              alignItems: "center",
-              gap: "0.2rem",
-            }}
-          >
-            <button
-              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button e1de0imv0 e1de0imv0 css-9zpnh7 e1de0imv0"
-              rel="noopener noreferrer"
-              target=""
-            >
-              Connect wallet
-            </button>
-          </span>
-        </p>
-      )}
+      <div className="flex justify-start items-center w-full">
+        <ScrollButton
+          connect={
+            <div className="MuiBox-root css-chaoz9 e1de0imv0">
+              <p className="MuiTypography-root MuiTypography-body1 css-1ot4ywj e1de0imv0">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1aed6ux e1de0imv0"
+                  focusable="false"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M14.846 11.0921C14.7322 10.812 14.4172 10.6764 14.1372 10.7858C13.8572 10.8952 13.7215 11.2146 13.8309 11.4946C13.9753 11.8534 13.9272 12.2603 13.704 12.5841C13.4852 12.9078 13.1308 13.096 12.7327 13.096H3.27308C2.83992 13.096 2.45926 12.8728 2.24924 12.4922C2.03922 12.1159 2.04797 11.6696 2.27549 11.3021L7.00529 3.64952C7.21968 3.29949 7.59159 3.09385 8.00288 3.09385C8.41417 3.09385 8.78607 3.30387 9.00047 3.64952L12.5008 9.31565C12.6583 9.5738 12.9952 9.65256 13.2533 9.49504C13.5115 9.33753 13.5903 9.00062 13.4327 8.74248L9.93243 3.07635C9.51676 2.40254 8.79482 2 8.00288 2C7.21093 2 6.48899 2.40254 6.07333 3.07635L1.34354 10.7333C0.905996 11.4421 0.884119 12.304 1.29103 13.0304C1.69794 13.7567 2.43738 14.1942 3.26871 14.1942H12.7283C13.494 14.1942 14.1766 13.8311 14.6053 13.201C15.0298 12.5753 15.1173 11.7877 14.8416 11.0921H14.846Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M8.00288 9.47567C7.67941 9.47567 7.41689 9.21314 7.41689 8.88968L7.41689 6.59414C7.41689 6.27067 7.67941 6.00815 8.00288 6.00815C8.32635 6.00815 8.58887 6.27067 8.58887 6.59414L8.58887 8.88968C8.58887 9.21314 8.32635 9.47567 8.00288 9.47567Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M8.00288 10.2351C7.67925 10.2351 7.41689 10.4974 7.41689 10.8211C7.41689 11.1447 7.67925 11.4071 8.00288 11.4071C8.32651 11.4071 8.58887 11.1447 8.58887 10.8211C8.58887 10.4974 8.32651 10.2351 8.00288 10.2351Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span
+                  className="MuiStack-root css-1xhj18k e1de0imv0"
+                  style={{
+                    display: "inline-flex",
+                    verticalAlign: "middle",
+                    alignItems: "center",
+                    gap: "0.2rem",
+                  }}
+                >
+                  <button
+                    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways MuiLink-button e1de0imv0 e1de0imv0 css-9zpnh7 e1de0imv0"
+                    rel="noopener noreferrer"
+                    target=""
+                  >
+                    Connect wallet
+                  </button>
+                </span>
+              </p>
+            </div>
+          }
+        />
+      </div>
 
       {/* summary section */}
-      <WithdrawSummary amount={amount} />
+      <WithdrawSummary amount={amount} open={open} />
       {/* inner content for withdraw */}
 
       <div className="w-full grid place-items-center">

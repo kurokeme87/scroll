@@ -22,12 +22,14 @@ import AppProvider from "./Providers/AppProvider.jsx";
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
+import OfflineToast from "./components/OfflineToast.jsx";
 
 function App() {
   const queryClient = new QueryClient();
 
   return (
     <WagmiRainbowKitProvider>
+      <OfflineToast />
       <QueryClientProvider client={queryClient}>
         <AppProvider>
           <ToastContainer autoClose={2000} hideProgressBar={true} />

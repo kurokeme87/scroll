@@ -30,7 +30,7 @@ const WithdrawToEthereum = ({ setInnerTabOpen, innerTabOpen }) => {
 
       {/* content for inner withdraw tab */}
       <div className={`${innerTabOpen === "withdraw" ? "block" : "hidden"}`}>
-        <InnerWithdrawTabContent />
+        <InnerWithdrawTabContent open={innerTabOpen === "withdraw"} />
       </div>
       {/* content for inner withdraw tab */}
 

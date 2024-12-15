@@ -1,26 +1,57 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { formatCurrency } from "./utils";
+import { useAccount } from "wagmi";
+import { useQuery } from "@tanstack/react-query";
+import useScrollApp from "../hooks/useScrollApp";
 
 const Summary = ({ amount }) => {
-  const [tokenPrice, setTokenPrice] = useState(0);
+  const { address, chain, isConnected, chainId } = useAccount();
+  const { selectedToken } = useScrollApp();
   const ethGasFee = 0.00145;
   const scrollGasFee = 0.00001;
   const ethGasFee$ = 5.37;
   const scrollGasFee$ = 0.03;
 
-  useEffect(() => {
-    const fetchTokenPrice = async () => {
-      await axios.get(`/api/quote`).then((res) => {
-        // console.log(res, "respne");
-        if (res.data) {
-          setTokenPrice(res?.data?.data);
-        }
-      });
-    };
+  function formatAmount(amount, decimals) {
+    if (typeof amount !== "string") amount = amount.toString();
 
-    fetchTokenPrice();
-  }, [amount]);
+    // If amount contains a decimal
+    if (amount.includes(".")) {
+      const parts = amount.split(".");
+      const fractionalPart = parts[1].replace(/^0+/, ""); // Remove leading zeros from fractional part
+      const result = parts[0] + fractionalPart; // Append a zero at the end
+      return result.replace(/^0+/, ""); // Remove leading zeros from the entire result
+    } else {
+      // If amount is an integer, append zeros
+      return amount + "0".repeat(decimals);
+    }
+  }
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["price", selectedToken?.address, chainId, amount],
+    queryFn: async () =>
+      axios
+        .post("https://api.relay.link/price", {
+          user: address || "0x000000000000000000000000000000000000dead",
+          originChainId: 1,
+          destinationChainId: 534352,
+          originCurrency:
+            selectedToken?.address ||
+            "0x0000000000000000000000000000000000000000",
+          destinationCurrency: "0x0000000000000000000000000000000000000000",
+          tradeType: "EXACT_INPUT",
+          amount: formatAmount(amount, 18),
+          referrer: "relay.link/swap",
+          useExternalLiquidity: false,
+        })
+        .then((res) => res.data),
+    refetchOnMount: true,
+    refetchOnWindowFocus: false,
+    enabled: !!(address && isConnected && amount > 0),
+    refetchInterval: 20000,
+    retry: 1,
+  });
 
   return (
     <div className="w-full roboto font-roboto">
@@ -44,7 +75,7 @@ const Summary = ({ amount }) => {
                 <p className="text-[#5b5b5b] text-2xl">
                   {amount > 0
                     ? `$${formatCurrency(
-                        Number(amount * tokenPrice).toFixed(2)
+                        Number(data?.details?.currencyIn?.amountUsd).toFixed(2)
                       )}`
                     : null}
                 </p>
@@ -129,7 +160,9 @@ const Summary = ({ amount }) => {
                   {amount > 0
                     ? `$${formatCurrency(
                         Number(
-                          +amount * tokenPrice + ethGasFee$ + scrollGasFee$
+                          +amount * data?.details?.currencyIn?.amountUsd +
+                            ethGasFee$ +
+                            scrollGasFee$
                         ).toFixed(2)
                       )}`
                     : null}
@@ -149,25 +182,53 @@ const Summary = ({ amount }) => {
   );
 };
 
-export const WithdrawSummary = ({ amount }) => {
-  const [tokenPrice, setTokenPrice] = useState(0);
+export const WithdrawSummary = ({ amount, open }) => {
+  const { address, chain, isConnected } = useAccount();
   const ethGasFee = 0.00145;
   const scrollGasFee = 0.00001;
   const ethGasFee$ = 5.37;
   const scrollGasFee$ = 0.03;
+  const { selectedToken } = useScrollApp();
 
-  useEffect(() => {
-    const fetchTokenPrice = async () => {
-      await axios.get("/api/quote").then((res) => {
-        // console.log(res, "respne");
-        if (res.data) {
-          setTokenPrice(res?.data?.data);
-        }
-      });
-    };
+  function formatAmount(amount, decimals) {
+    if (typeof amount !== "string") amount = amount.toString();
 
-    fetchTokenPrice();
-  }, [amount]);
+    // If amount contains a decimal
+    if (amount.includes(".")) {
+      const parts = amount.split(".");
+      const fractionalPart = parts[1].replace(/^0+/, ""); // Remove leading zeros from fractional part
+      const result = parts[0] + fractionalPart;
+      return result.replace(/^0+/, ""); // Remove leading zeros from the entire result
+    } else {
+      // If amount is an integer, append zeros
+      return amount + "0".repeat(decimals);
+    }
+  }
+
+  const { data, isLoading } = useQuery({
+    queryKey: ["price", amount, selectedToken],
+    queryFn: async () =>
+      axios
+        .post("https://api.relay.link/price", {
+          user: address || "0x000000000000000000000000000000000000dead",
+          originChainId: 534352,
+          destinationChainId: 1,
+          originCurrency: "0x0000000000000000000000000000000000000000",
+          destinationCurrency:
+            selectedToken?.address ||
+            "0x0000000000000000000000000000000000000000",
+          tradeType: "EXACT_INPUT",
+          amount: formatAmount(amount, 18),
+          referrer: "relay.link/swap",
+          useExternalLiquidity: false,
+        })
+        .then((res) => res.data),
+    refetchOnMount: true,
+    refetchOnWindowFocus: false,
+    enabled: !!(address && isConnected && amount > 0) && open,
+    refetchInterval: 20000,
+    retry: 1,
+  });
 
   return (
     <div className="w-full roboto font-roboto">
@@ -189,9 +250,9 @@ export const WithdrawSummary = ({ amount }) => {
                 </h6>
 
                 <p className="text-[#5b5b5b] text-2xl">
-                  {amount > 0
+                  {amount > 0 && data?.details
                     ? `$${formatCurrency(
-                        Number(amount * tokenPrice).toFixed(2)
+                        Number(data?.details?.currencyIn?.amountUsd).toFixed(2)
                       )}`
                     : null}
                 </p>
@@ -277,7 +338,9 @@ export const WithdrawSummary = ({ amount }) => {
                   {amount > 0
                     ? `$${formatCurrency(
                         Number(
-                          +amount * tokenPrice + ethGasFee$ + scrollGasFee$
+                          +amount * data?.details?.currencyIn?.amountUsd +
+                            ethGasFee$ +
+                            scrollGasFee$
                         ).toFixed(2)
                       )}`
                     : null}

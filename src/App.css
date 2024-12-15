@@ -22,3 +22,7 @@
 .roboto {
   font-family: "Roboto", sans-serif !important;
 }
+
+.discrete {
+  transition-behavior: allow-discrete;
+}
