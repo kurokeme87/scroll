@@ -160,7 +160,7 @@ const Summary = ({ amount }) => {
                   {amount > 0
                     ? `$${formatCurrency(
                         Number(
-                          +amount * data?.details?.currencyIn?.amountUsd +
+                          +amount * +data?.details?.currencyIn?.amountUsd +
                             ethGasFee$ +
                             scrollGasFee$
                         ).toFixed(2)
